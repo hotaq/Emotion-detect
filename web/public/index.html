@@ -1,0 +1,229 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>เห็นใจ · HENJAI</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin:0; background:#000; color:#fff; height:100dvh; display:flex; flex-direction:column;
+         font-family:-apple-system,"Noto Sans Thai",sans-serif; overflow:hidden; }
+  #hit { flex:1; width:100%; border:0; background:#000; color:#fff; cursor:pointer; font-family:inherit;
+         display:flex; align-items:center; justify-content:center; padding:2vh 4vw; }
+  #hit:focus-visible { outline:4px solid #fff; outline-offset:-12px; }
+
+  #stage { display:flex; flex-direction:column; align-items:center; gap:3vh; }
+
+  /* ผู้ใช้จริงมองไม่เห็นอยู่แล้ว — กรอบนี้มีไว้ให้คนข้าง ๆ รู้ว่ากล้องส่องอะไร */
+  #vid { display:none; width:min(72vw,520px); aspect-ratio:4/3; object-fit:cover;
+         border-radius:14px; background:#000; border:2px solid rgba(255,255,255,.16);
+         transition:border-color .12s ease-out; }
+  #vid.live { display:block; }
+  #vid.sending { border-color:#ffb020; }
+
+  #label { font-size:clamp(1.5rem,5.5vw,2.4rem); font-weight:600; }
+
+  #wave { display:none; gap:5px; align-items:center; height:14vh; }
+  #wave i { width:6px; border-radius:3px; background:#fff; animation:w .9s ease-in-out infinite; }
+  @keyframes w { 0%,100%{height:14%} 50%{height:86%} }
+  @media (prefers-reduced-motion:reduce){ #wave i{ animation:none; height:48%; } }
+
+  #sent { position:fixed; top:14px; left:50%; transform:translateX(-50%); z-index:4;
+          font-family:ui-monospace,monospace; font-size:.72rem; letter-spacing:.16em;
+          color:#ffb020; opacity:0; transition:opacity .12s; pointer-events:none; }
+  #sent.on { opacity:1; }
+
+  #narr { padding:2vh 6vw calc(2vh + env(safe-area-inset-bottom));
+          font-size:clamp(1.1rem,3.6vw,1.7rem); line-height:1.65; text-align:center; min-height:18vh; }
+  #fast { color:#ffb020; font-size:clamp(1rem,3.2vw,1.4rem); font-weight:600;
+          text-align:center; padding:1vh 6vw 0; min-height:3vh; }
+  #hint { color:#6b6b6b; font-size:.95rem; text-align:center; padding-bottom:2vh; }
+  canvas { display:none; }
+</style>
+
+<button id="hit" aria-describedby="narr">
+  <span id="stage">
+    <video id="vid" playsinline muted></video>
+    <span id="label">กดเพื่อทำงาน</span>
+    <span id="wave" role="status" aria-label="กำลังพูด"></span>
+  </span>
+</button>
+<div id="sent">READING…</div>
+<div id="fast" role="status" aria-live="assertive"></div>
+<div id="narr" role="status" aria-live="polite"></div>
+<div id="hint"></div>
+<canvas id="cv"></canvas>
+
+<script>
+const DEV = new URLSearchParams(location.search).has("dev");
+if (DEV) document.body.classList.add("dev");
+wave.innerHTML = Array.from({length:12},(_,i)=>`<i style="animation-delay:${(i*.07).toFixed(2)}s"></i>`).join("");
+
+const W = 768, EVERY = 500, STILL = .02, SCENE = .18, ALERT = .45;   // 0.5 วิ นับจาก 'พูดจบ'
+let on=false, busy=false, speaking=false, stream=null, tLast=0, prevGray=null;
+let recent=[], summary="", lastSpoken="", nOk=0, nDup=0;
+
+const ctx = cv.getContext("2d", { willReadFrequently:true });
+
+// ---- เสียงไทยในเบราว์เซอร์ ----
+// รายชื่อเสียงโหลดแบบ async ต้องรอ voiceschanged ไม่งั้นรอบแรกได้ลิสต์ว่าง
+let voices = [], thVoice = null, unlocked = false;
+function loadVoices(){
+  voices = speechSynthesis?.getVoices?.() || [];
+  thVoice = voices.find(v => v.lang?.toLowerCase().startsWith("th")) || null;
+  return thVoice;
+}
+if (window.speechSynthesis){
+  loadVoices();
+  speechSynthesis.onvoiceschanged = loadVoices;
+}
+
+// iOS/Safari ต้อง speak ครั้งแรกภายใน user gesture ไม่งั้นบล็อกทุกครั้งถัดไป
+function unlockSpeech(){
+  if (unlocked || !window.speechSynthesis) return;
+  const u = new SpeechSynthesisUtterance(" ");
+  u.volume = 0; speechSynthesis.speak(u);
+  unlocked = true;
+}
+
+function voiceStatus(){
+  if (!window.speechSynthesis) return "เบราว์เซอร์นี้ไม่รองรับเสียงพูด";
+  if (!voices.length) return "ยังโหลดรายชื่อเสียงไม่เสร็จ";
+  if (!thVoice) return `ไม่มีเสียงไทยในเครื่อง (มี ${voices.length} เสียง) — จะพูดไม่ออก`;
+  return `เสียง ${thVoice.name}`;
+}
+
+// เบราว์เซอร์ตัดเสียงถ้าข้อความยาวเกิน -> ซอยเป็นท่อน แล้วได้จังหวะหายใจด้วย
+function chunk(t, max = 170) {
+  const out = [];
+  for (const line of String(t).split(/\n+/)) {
+    let s = line.trim();
+    while (s.length > max) {
+      let cut = s.lastIndexOf(" ", max);
+      if (cut < max * 0.5) cut = max;
+      out.push(s.slice(0, cut)); s = s.slice(cut).trim();
+    }
+    if (s) out.push(s);
+  }
+  return out;
+}
+
+function speakAll(parts) {
+  const list = parts.flatMap(p => (p ? chunk(p) : []));
+  if (!list.length || !window.speechSynthesis) return;
+  if (!thVoice) loadVoices();
+  let i = 0;
+  const next = () => {
+    if (i >= list.length) { speaking = false; tLast = Date.now(); paint(false); return; }
+    const u = new SpeechSynthesisUtterance(list[i++]);
+    u.lang = "th-TH"; u.rate = 1.05;
+    if (thVoice) u.voice = thVoice;
+    u.onstart = () => { speaking = true; paint(true); };
+    u.onend = next;
+    u.onerror = e => { paint(false, "เสียงพูดไม่ออก: " + (e.error || "")); next(); };
+    speechSynthesis.speak(u);
+  };
+  next();
+}
+
+const speak = t => speakAll([t]);
+
+// ---- วัดความต่างของเฟรมในเบราว์เซอร์ ไม่เปลืองโควตา ----
+function grayOf(img){
+  const s = 64, h = 36, c = document.createElement("canvas");
+  c.width = s; c.height = h;
+  c.getContext("2d").drawImage(img, 0, 0, s, h);
+  const d = c.getContext("2d").getImageData(0,0,s,h).data, g = new Uint8Array(s*h);
+  for (let i=0;i<g.length;i++) g[i] = (d[i*4]*.299 + d[i*4+1]*.587 + d[i*4+2]*.114)|0;
+  return g;
+}
+const change = (a,b) => { let s=0; for (let i=0;i<a.length;i++) s += Math.abs(a[i]-b[i]); return s/a.length/255; };
+
+const sim = (a,b) => {                        // กันพูดซ้ำแบบหยาบ ๆ พอ
+  const A=new Set(a.split(/\s+/)), B=new Set(b.split(/\s+/));
+  const hit=[...A].filter(x=>B.has(x)).length;
+  return hit / Math.max(A.size, B.size, 1);
+};
+
+async function start(){
+  stream = await navigator.mediaDevices.getUserMedia(
+    { video:{ facingMode:{ideal:"environment"}, width:{ideal:1280} }, audio:false });
+  vid.srcObject = stream; await vid.play(); vid.classList.add("live");
+  cv.width = W; cv.height = Math.round(vid.videoHeight * W / vid.videoWidth);
+  tLast = 0; prevGray = null; loop();
+}
+function stop(){ stream?.getTracks().forEach(t=>t.stop()); stream=null;
+  vid.srcObject=null; vid.classList.remove("live","sending"); speaking=false; speechSynthesis.cancel(); }   // cancel เฉพาะตอนหยุด
+
+async function loop(){
+  if (!on) return;
+  const now = Date.now();
+  if (!busy && !speaking && now - tLast >= EVERY && vid.videoWidth){
+    ctx.drawImage(vid, 0, 0, cv.width, cv.height);
+    const g = grayOf(cv);
+    const ch = prevGray ? change(prevGray, g) : 1;
+    if (nOk && ch < STILL){                   // ภาพนิ่ง -> ไม่ต้องถาม
+      tLast = now; paint(false, "ภาพนิ่ง ไม่มีอะไรใหม่");
+    } else {
+      prevGray = g; tLast = now; busy = true;
+      vid.classList.add("sending"); sent.classList.add("on");
+      setTimeout(() => { vid.classList.remove("sending"); sent.classList.remove("on"); }, 600);
+      const mode = !nOk ? "first" : ch >= ALERT ? "alert" : ch >= SCENE ? "scene" : "delta";
+      paint(false, "กำลังคิด…");
+      try {
+        const r = await fetch("/api/analyze", {
+          method:"POST", headers:{"Content-Type":"application/json"},
+          body: JSON.stringify({ image: cv.toDataURL("image/jpeg",.8).split(",")[1],
+                                 recent, summary, mode }) });
+        const d = await r.json();
+        if (d.error) { paint(false, d.error); }
+        else {
+          nOk++;
+          if (d.memory_th) summary = String(d.memory_th).slice(0,600);
+          const n = (d.narrative_th||"").trim();
+          const docText = (d.reading && d.reading.is_document) ? (d.reading.text||"").trim() : "";
+          if (docText) {                        // ผู้ใช้ยกเอกสารมาให้อ่าน -> อ่านให้จบ ไม่เช็คซ้ำ
+            narr.textContent = docText;
+            speakAll([n, docText]);
+            paint(false, DEV ? `${d._ms} ms · อ่านเอกสาร ${docText.length} ตัวอักษร` : "");
+          } else if (n && !recent.some(p => sim(n,p) > .8)) {
+            lastSpoken = n; recent = [...recent, n].slice(-5);
+            narr.textContent = n; speak(n);
+            paint(false, DEV ? `${d._ms} ms · ${mode} · เปลี่ยน ${ch.toFixed(3)}` : "");
+          } else { nDup++; paint(false, DEV ? `ซ้ำ ${nDup} ครั้ง` : ""); }
+        }
+      } catch(e){ paint(false, "ต่อเน็ตไม่ได้"); }
+      busy = false;
+    }
+  }
+  setTimeout(loop, 300);
+}
+
+function paint(speaking, hintText){
+  wave.style.display = speaking ? "flex" : "none";
+  label.style.display = speaking ? "none" : "block";
+  label.textContent = on ? "แตะเพื่อหยุด" : "กดเพื่อทำงาน";
+  if (hintText !== undefined) hint.textContent = hintText;
+}
+
+hit.onclick = async () => {
+  unlockSpeech();                             // ต้องเรียกใน gesture เท่านั้น
+  if (on){
+    on = false; stop(); narr.textContent = "";
+    paint(false, "แตะหน้าจอเพื่อเริ่ม");
+    setTimeout(() => speak("หยุดแล้ว"), 100);   // stop() เพิ่ง cancel() ไป ต้องรอก่อนค่อยพูด
+    return;
+  }
+  try {
+    on=true; paint(false,"กำลังเปิดกล้อง…");
+    await start();
+    narr.textContent="กำลังดูสิ่งรอบตัว…";
+    speak("เริ่มทำงาน");                       // พิสูจน์ว่าเสียงออกได้ ไม่ต้องรอ Gemini
+    paint(false, DEV ? voiceStatus() : "");
+  } catch(e){ on=false; paint(false,"เปิดกล้องไม่ได้ — ต้องอนุญาตกล้อง และต้องเป็น https"); }
+};
+
+// ปุ่มทดสอบเสียงอย่างเดียว แยกจากกล้องและ Gemini
+addEventListener("keydown", e => { if (e.key === "s") { unlockSpeech(); speak("ทดสอบเสียงภาษาไทย"); } });
+paint(false, "แตะหน้าจอเพื่อเริ่ม");
+setTimeout(() => { if (!on) hint.textContent = voiceStatus(); }, 800);
+</script>

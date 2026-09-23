@@ -1,10 +1,9 @@
-streamlit
 pillow
 python-dotenv
 google-generativeai
 google-genai
-edge-tts
 gtts
 ultralytics
 opencv-python
 numpy
+flask

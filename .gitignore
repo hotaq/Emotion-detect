@@ -13,3 +13,8 @@ venv/
 
 # Local agent session
 .pi/
+.serena/
+
+# Local camera preferences and working backup
+poc/.cam_choice.json
+poc/fast_old.py.bak

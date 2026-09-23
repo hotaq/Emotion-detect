@@ -1,0 +1,136 @@
+<svg viewBox="0 0 1600 600" role="img" aria-labelledby="henjai-wide-title henjai-wide-desc"
+     xmlns="http://www.w3.org/2000/svg">
+  <title id="henjai-wide-title">HENJAI system architecture</title>
+  <desc id="henjai-wide-desc">A camera feed passes through pre-processing, then splits into three parallel readings — facial emotion, body language, and environment. The three results merge at a context fusion step, which feeds a language model that writes one sentence, a priority filter that puts danger first, and finally Thai speech delivered to the user.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#8a8a92"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ffb020"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0d0d0f"/>
+
+  <!-- ===== arrows first (z-order behind boxes) ===== -->
+  <line x1="216" y1="360" x2="264" y2="360" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- fan out: three distinct attach points on the right edge of Pre-processing -->
+  <path d="M 440,340 H 456 Q 464,340 464,332 V 264 Q 464,256 472,256 H 488"
+        fill="none" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="440" y1="360" x2="488" y2="360" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M 440,380 H 456 Q 464,380 464,388 V 456 Q 464,464 472,464 H 488"
+        fill="none" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- fan in: accent marks the stretch that turns detection into meaning -->
+  <path d="M 664,256 H 680 Q 688,256 688,264 V 332 Q 688,340 696,340 H 712"
+        fill="none" stroke="#ffb020" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+  <line x1="664" y1="360" x2="712" y2="360" stroke="#ffb020" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+  <path d="M 664,464 H 680 Q 688,464 688,456 V 388 Q 688,380 696,380 H 712"
+        fill="none" stroke="#ffb020" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+
+  <line x1="888" y1="360" x2="936" y2="360" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="1112" y1="360" x2="1160" y2="360" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="1336" y1="360" x2="1384" y2="360" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- ===== arrow labels — mask sits 8px above the stroke ===== -->
+  <rect x="212" y="340" width="56" height="12" rx="2" fill="#0d0d0f"/>
+  <text x="240" y="349" fill="#8a8a92" font-size="8" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".06em">30 FPS</text>
+
+  <rect x="884" y="340" width="56" height="12" rx="2" fill="#0d0d0f"/>
+  <text x="912" y="349" fill="#8a8a92" font-size="8" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".06em">2.2 S</text>
+
+  <rect x="1332" y="340" width="56" height="12" rx="2" fill="#0d0d0f"/>
+  <text x="1360" y="349" fill="#8a8a92" font-size="8" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".06em">0.9 S</text>
+
+  <!-- ===== nodes ===== -->
+  <!-- 1 Camera -->
+  <rect x="40" y="320" width="176" height="80" rx="6" fill="#0d0d0f"/>
+  <rect x="40" y="320" width="176" height="80" rx="6" fill="rgba(245,245,245,0.06)" stroke="#5a5a63" stroke-width="1"/>
+  <rect x="48" y="328" width="24" height="12" rx="2" fill="transparent" stroke="rgba(90,90,99,0.7)" stroke-width=".8"/>
+  <text x="60" y="337" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">IN</text>
+  <text x="128" y="366" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Helvetica, sans-serif" text-anchor="middle">Camera</text>
+  <text x="128" y="384" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">live feed</text>
+
+  <!-- 2 Pre-processing -->
+  <rect x="264" y="320" width="176" height="80" rx="6" fill="#0d0d0f"/>
+  <rect x="264" y="320" width="176" height="80" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="272" y="328" width="32" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="288" y="337" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">PRE</text>
+  <text x="352" y="366" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Helvetica, sans-serif" text-anchor="middle">Pre-processing</text>
+  <text x="352" y="384" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">768px · frame diff</text>
+
+  <!-- 3 Emotion Reading -->
+  <rect x="488" y="220" width="176" height="72" rx="6" fill="#0d0d0f"/>
+  <rect x="488" y="220" width="176" height="72" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="496" y="228" width="24" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="508" y="237" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">01</text>
+  <text x="576" y="262" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Helvetica, sans-serif" text-anchor="middle">Emotion</text>
+  <text x="576" y="280" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">MediaPipe + FER</text>
+
+  <!-- 4 Body Language -->
+  <rect x="488" y="324" width="176" height="72" rx="6" fill="#0d0d0f"/>
+  <rect x="488" y="324" width="176" height="72" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="496" y="332" width="24" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="508" y="341" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">02</text>
+  <text x="576" y="366" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Helvetica, sans-serif" text-anchor="middle">Body Language</text>
+  <text x="576" y="384" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">YOLO11-Pose</text>
+
+  <!-- 5 Environment -->
+  <rect x="488" y="428" width="176" height="72" rx="6" fill="#0d0d0f"/>
+  <rect x="488" y="428" width="176" height="72" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="496" y="436" width="24" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="508" y="445" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">03</text>
+  <text x="576" y="470" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Helvetica, sans-serif" text-anchor="middle">Environment</text>
+  <text x="576" y="488" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">YOLO11</text>
+
+  <!-- 6 Context Fusion — FOCAL -->
+  <rect x="712" y="320" width="176" height="80" rx="6" fill="#0d0d0f"/>
+  <rect x="712" y="320" width="176" height="80" rx="6" fill="rgba(255,176,32,0.12)" stroke="#ffb020" stroke-width="1"/>
+  <rect x="720" y="328" width="40" height="12" rx="2" fill="transparent" stroke="rgba(255,176,32,0.5)" stroke-width=".8"/>
+  <text x="740" y="337" fill="#ffb020" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">FUSE</text>
+  <text x="800" y="366" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Helvetica, sans-serif" text-anchor="middle">Context Fusion</text>
+  <text x="800" y="384" fill="#ffb020" font-size="9" font-family="Menlo, monospace" text-anchor="middle">three signals · one state</text>
+
+  <!-- 7 Narrative -->
+  <rect x="936" y="320" width="176" height="80" rx="6" fill="#0d0d0f"/>
+  <rect x="936" y="320" width="176" height="80" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="944" y="328" width="28" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="958" y="337" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">LLM</text>
+  <text x="1024" y="366" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Helvetica, sans-serif" text-anchor="middle">Narrative</text>
+  <text x="1024" y="384" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">gemini-3.1-flash-lite</text>
+
+  <!-- 8 Priority Filter -->
+  <rect x="1160" y="320" width="176" height="80" rx="6" fill="#0d0d0f"/>
+  <rect x="1160" y="320" width="176" height="80" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="1168" y="328" width="44" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="1190" y="337" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">FILTER</text>
+  <text x="1248" y="366" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Helvetica, sans-serif" text-anchor="middle">Priority Filter</text>
+  <text x="1248" y="384" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">danger first</text>
+
+  <!-- 9 Speech → User — FOCAL -->
+  <rect x="1384" y="320" width="176" height="80" rx="6" fill="#0d0d0f"/>
+  <rect x="1384" y="320" width="176" height="80" rx="6" fill="rgba(255,176,32,0.12)" stroke="#ffb020" stroke-width="1"/>
+  <rect x="1392" y="328" width="28" height="12" rx="2" fill="transparent" stroke="rgba(255,176,32,0.5)" stroke-width=".8"/>
+  <text x="1406" y="337" fill="#ffb020" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">OUT</text>
+  <text x="1472" y="366" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Helvetica, sans-serif" text-anchor="middle">Thai Speech</text>
+  <text x="1472" y="384" fill="#ffb020" font-size="9" font-family="Menlo, monospace" text-anchor="middle">edge-tts · th-TH-Niwat</text>
+
+  <!-- ===== legend ===== -->
+  <line x1="40" y1="544" x2="1560" y2="544" stroke="rgba(245,245,245,0.12)" stroke-width=".8"/>
+  <text x="40" y="564" fill="#8a8a92" font-size="8" font-family="Menlo, monospace" letter-spacing=".14em">LEGEND</text>
+
+  <rect x="140" y="556" width="12" height="10" rx="2" fill="rgba(245,245,245,0.06)" stroke="#5a5a63" stroke-width="1"/>
+  <text x="160" y="564" fill="#8a8a92" font-size="9" font-family="Helvetica, sans-serif">Input</text>
+
+  <rect x="280" y="556" width="12" height="10" rx="2" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <text x="300" y="564" fill="#8a8a92" font-size="9" font-family="Helvetica, sans-serif">Processing step</text>
+
+  <rect x="460" y="556" width="12" height="10" rx="2" fill="rgba(255,176,32,0.12)" stroke="#ffb020" stroke-width="1"/>
+  <text x="480" y="564" fill="#8a8a92" font-size="9" font-family="Helvetica, sans-serif">Where the system earns its name</text>
+
+  <line x1="740" y1="561" x2="768" y2="561" stroke="#ffb020" stroke-width="1.2"/>
+  <text x="776" y="564" fill="#8a8a92" font-size="9" font-family="Helvetica, sans-serif">The stretch that turns detection into meaning</text>
+</svg>

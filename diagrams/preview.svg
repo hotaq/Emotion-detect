@@ -1,0 +1,138 @@
+<svg viewBox="0 0 900 920" role="img" aria-labelledby="henjai-architecture-title henjai-architecture-desc"
+     xmlns="http://www.w3.org/2000/svg">
+  <title id="henjai-architecture-title">สถาปัตยกรรมระบบเห็นใจ</title>
+  <desc id="henjai-architecture-desc">แผนผังระบบผู้ช่วยการมองเห็น ภาพจากกล้องผ่านการเตรียมภาพ แล้วแยกอ่านสามด้านพร้อมกันคืออารมณ์ ภาษากาย และสภาพแวดล้อม ผลทั้งสามรวมที่จุดรวมบริบท ส่งต่อให้โมเดลภาษาเรียบเรียงเป็นประโยค ผ่านตัวจัดลำดับความสำคัญที่ดันเรื่องอันตรายขึ้นก่อน แล้วอ่านออกเป็นเสียงไทยให้ผู้ใช้</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#8a8a92"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#ffb020"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0d0d0f"/>
+
+  <!-- ===== arrows (drawn before boxes) ===== -->
+  <line x1="450" y1="100" x2="450" y2="148" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- fan out -->
+  <path d="M 375,208 V 232 Q 375,240 367,240 H 166 Q 158,240 158,248 V 272"
+        fill="none" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="208" x2="450" y2="272" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <path d="M 525,208 V 232 Q 525,240 533,240 H 734 Q 742,240 742,248 V 272"
+        fill="none" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- fan in -->
+  <path d="M 158,348 V 376 Q 158,384 166,384 H 367 Q 375,384 375,392 V 420"
+        fill="none" stroke="#ffb020" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+  <line x1="450" y1="348" x2="450" y2="420" stroke="#ffb020" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+  <path d="M 742,348 V 376 Q 742,384 734,384 H 533 Q 525,384 525,392 V 420"
+        fill="none" stroke="#ffb020" stroke-width="1.2" marker-end="url(#arrow-accent)"/>
+
+  <line x1="450" y1="488" x2="450" y2="552" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="612" x2="450" y2="656" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <line x1="450" y1="716" x2="450" y2="760" stroke="#8a8a92" stroke-width="1.2" marker-end="url(#arrow)"/>
+
+  <!-- ===== arrow labels (mask + 10px side gap on vertical segments) ===== -->
+  <rect x="460" y="116" width="56" height="12" rx="2" fill="#0d0d0f"/>
+  <text x="488" y="125" fill="#8a8a92" font-size="8" font-family="Menlo, monospace"
+        text-anchor="middle" letter-spacing=".06em">30 FPS</text>
+
+  <rect x="460" y="512" width="56" height="12" rx="2" fill="#0d0d0f"/>
+  <text x="488" y="521" fill="#8a8a92" font-size="8" font-family="Menlo, monospace"
+        text-anchor="middle" letter-spacing=".06em">2.2 S</text>
+
+  <rect x="460" y="730" width="56" height="12" rx="2" fill="#0d0d0f"/>
+  <text x="488" y="739" fill="#8a8a92" font-size="8" font-family="Menlo, monospace"
+        text-anchor="middle" letter-spacing=".06em">0.9 S</text>
+
+  <!-- ===== nodes ===== -->
+  <!-- 1 กล้อง -->
+  <rect x="370" y="48" width="160" height="52" rx="6" fill="#0d0d0f"/>
+  <rect x="370" y="48" width="160" height="52" rx="6" fill="rgba(245,245,245,0.06)" stroke="#5a5a63" stroke-width="1"/>
+  <rect x="378" y="54" width="24" height="12" rx="2" fill="transparent" stroke="rgba(90,90,99,0.7)" stroke-width=".8"/>
+  <text x="390" y="63" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">IN</text>
+  <text x="450" y="86" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Thonburi, sans-serif" text-anchor="middle">กล้อง</text>
+
+  <!-- 2 เตรียมภาพ -->
+  <rect x="300" y="148" width="300" height="60" rx="6" fill="#0d0d0f"/>
+  <rect x="300" y="148" width="300" height="60" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="308" y="154" width="32" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="324" y="163" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">PRE</text>
+  <text x="450" y="182" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Thonburi, sans-serif" text-anchor="middle">เตรียมภาพ</text>
+  <text x="450" y="198" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">768px · frame diff</text>
+
+  <!-- 3 อ่านอารมณ์ -->
+  <rect x="40" y="272" width="236" height="76" rx="6" fill="#0d0d0f"/>
+  <rect x="40" y="272" width="236" height="76" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="48" y="278" width="24" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="60" y="287" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">01</text>
+  <text x="158" y="312" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Thonburi, sans-serif" text-anchor="middle">อ่านอารมณ์</text>
+  <text x="158" y="330" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">MediaPipe + FER</text>
+
+  <!-- 4 อ่านภาษากาย -->
+  <rect x="332" y="272" width="236" height="76" rx="6" fill="#0d0d0f"/>
+  <rect x="332" y="272" width="236" height="76" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="340" y="278" width="24" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="352" y="287" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">02</text>
+  <text x="450" y="312" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Thonburi, sans-serif" text-anchor="middle">อ่านภาษากาย</text>
+  <text x="450" y="330" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">YOLO11-Pose</text>
+
+  <!-- 5 อ่านสภาพแวดล้อม -->
+  <rect x="624" y="272" width="236" height="76" rx="6" fill="#0d0d0f"/>
+  <rect x="624" y="272" width="236" height="76" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="632" y="278" width="24" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="644" y="287" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">03</text>
+  <text x="742" y="312" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Thonburi, sans-serif" text-anchor="middle">อ่านสภาพแวดล้อม</text>
+  <text x="742" y="330" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">YOLO11</text>
+
+  <!-- 6 รวมบริบท — FOCAL -->
+  <rect x="300" y="420" width="300" height="68" rx="6" fill="#0d0d0f"/>
+  <rect x="300" y="420" width="300" height="68" rx="6" fill="rgba(255,176,32,0.12)" stroke="#ffb020" stroke-width="1"/>
+  <rect x="308" y="426" width="40" height="12" rx="2" fill="transparent" stroke="rgba(255,176,32,0.5)" stroke-width=".8"/>
+  <text x="328" y="435" fill="#ffb020" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">FUSE</text>
+  <text x="450" y="458" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Thonburi, sans-serif" text-anchor="middle">รวมเป็นบริบทเดียว</text>
+  <text x="450" y="476" fill="#ffb020" font-size="9" font-family="Menlo, monospace" text-anchor="middle">context fusion</text>
+
+  <!-- 7 เรียบเรียง -->
+  <rect x="300" y="552" width="300" height="60" rx="6" fill="#0d0d0f"/>
+  <rect x="300" y="552" width="300" height="60" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="308" y="558" width="28" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="322" y="567" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">LLM</text>
+  <text x="450" y="586" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Thonburi, sans-serif" text-anchor="middle">เรียบเรียงเป็นประโยค</text>
+  <text x="450" y="602" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">gemini-3.1-flash-lite</text>
+
+  <!-- 8 จัดลำดับ -->
+  <rect x="320" y="656" width="260" height="60" rx="6" fill="#0d0d0f"/>
+  <rect x="320" y="656" width="260" height="60" rx="6" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <rect x="328" y="662" width="44" height="12" rx="2" fill="transparent" stroke="rgba(245,245,245,0.3)" stroke-width=".8"/>
+  <text x="350" y="671" fill="#8a8a92" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">FILTER</text>
+  <text x="450" y="690" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Thonburi, sans-serif" text-anchor="middle">จัดลำดับก่อนพูด</text>
+  <text x="450" y="706" fill="#8a8a92" font-size="9" font-family="Menlo, monospace" text-anchor="middle">danger first</text>
+
+  <!-- 9 เสียง → ผู้ใช้ — FOCAL -->
+  <rect x="280" y="760" width="340" height="72" rx="6" fill="#0d0d0f"/>
+  <rect x="280" y="760" width="340" height="72" rx="6" fill="rgba(255,176,32,0.12)" stroke="#ffb020" stroke-width="1"/>
+  <rect x="288" y="766" width="32" height="12" rx="2" fill="transparent" stroke="rgba(255,176,32,0.5)" stroke-width=".8"/>
+  <text x="304" y="775" fill="#ffb020" font-size="7" font-family="Menlo, monospace" text-anchor="middle" letter-spacing=".08em">OUT</text>
+  <text x="450" y="800" fill="#f5f5f5" font-size="16" font-weight="600" font-family="Thonburi, sans-serif" text-anchor="middle">พูดให้ผู้ใช้ฟัง</text>
+  <text x="450" y="818" fill="#ffb020" font-size="9" font-family="Menlo, monospace" text-anchor="middle">edge-tts · th-TH-Niwat</text>
+
+  <!-- ===== legend ===== -->
+  <line x1="40" y1="864" x2="860" y2="864" stroke="rgba(245,245,245,0.12)" stroke-width=".8"/>
+  <text x="40" y="884" fill="#8a8a92" font-size="8" font-family="Menlo, monospace" letter-spacing=".14em">LEGEND</text>
+
+  <rect x="140" y="876" width="12" height="10" rx="2" fill="rgba(245,245,245,0.06)" stroke="#5a5a63" stroke-width="1"/>
+  <text x="160" y="884" fill="#8a8a92" font-size="9" font-family="Thonburi, sans-serif">อินพุต</text>
+
+  <rect x="260" y="876" width="12" height="10" rx="2" fill="#17171a" stroke="rgba(245,245,245,0.28)" stroke-width="1"/>
+  <text x="280" y="884" fill="#8a8a92" font-size="9" font-family="Thonburi, sans-serif">ขั้นประมวลผล</text>
+
+  <rect x="420" y="876" width="12" height="10" rx="2" fill="rgba(255,176,32,0.12)" stroke="#ffb020" stroke-width="1"/>
+  <text x="440" y="884" fill="#8a8a92" font-size="9" font-family="Thonburi, sans-serif">จุดสำคัญของระบบ</text>
+
+  <line x1="620" y1="881" x2="648" y2="881" stroke="#ffb020" stroke-width="1.2"/>
+  <text x="656" y="884" fill="#8a8a92" font-size="9" font-family="Thonburi, sans-serif">เส้นทางที่ทำให้ต่างจากการบอกแค่ว่าเห็นอะไร</text>
+</svg>

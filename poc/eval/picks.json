@@ -1,0 +1,10 @@
+{
+  "emotion_0": 4, "emotion_1": 1, "emotion_2": 3,
+  "emotion_3": 0, "emotion_4": 3, "emotion_5": 6,
+  "body_0": 4, "body_1": 3, "body_2": 0,
+  "body_3": 3, "body_4": 1, "body_5": 1,
+  "env_0": 1, "env_1": 4, "env_2": 3,
+  "env_3": 7, "env_4": 4, "env_5": 0,
+  "nolabel_0": 1, "nolabel_1": 1, "nolabel_2": 2,
+  "nolabel_3": 0, "nolabel_4": 0, "nolabel_5": 1
+}

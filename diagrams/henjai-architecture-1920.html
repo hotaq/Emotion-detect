@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HENJAI · System Architecture (1920×1080)</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #e9e9ec; min-height: 100vh; display: flex; align-items: center;
+         justify-content: center; padding: 2rem; }
+  svg { width: 100%; max-width: 1920px; display: block; background: #ffffff; }
+</style>
+</head>
+<body>
+<svg viewBox="0 0 1920 1080" role="img" aria-labelledby="henjai-1920-title henjai-1920-desc"
+     xmlns="http://www.w3.org/2000/svg">
+  <title id="henjai-1920-title">HENJAI system architecture</title>
+  <desc id="henjai-1920-desc">A camera feed passes through pre-processing, then splits into three parallel readings — facial emotion, body language, and environment. The three results merge at a context fusion step, which feeds a language model that writes one sentence, a priority filter that puts danger first, and finally Thai speech delivered to the user.</desc>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#6b6b76"/>
+    </marker>
+    <marker id="arrow-accent" markerWidth="8" markerHeight="6" refX="7" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#b06b00"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- ===== header ===== -->
+  <text x="104" y="96" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" letter-spacing=".18em">ARCHITECTURE · TEAM RUSHHOUR</text>
+  <text x="104" y="156" fill="#1a1a1f" font-size="40" font-family="'Instrument Serif', serif">HENJAI — from pixels, to meaning, to voice</text>
+  <text x="104" y="196" fill="#6b6b76" font-size="20" font-family="'Geist', sans-serif">One camera. Three readings in parallel. Merged back into a single sentence a blind user can act on.</text>
+
+  <!-- ===== arrows first ===== -->
+  <line x1="264" y1="600" x2="328" y2="600" stroke="#6b6b76" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <path d="M 536,576 H 552 Q 560,576 560,568 V 480 Q 560,472 568,472 H 584"
+        fill="none" stroke="#6b6b76" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="536" y1="600" x2="584" y2="600" stroke="#6b6b76" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <path d="M 536,624 H 552 Q 560,624 560,632 V 720 Q 560,728 568,728 H 584"
+        fill="none" stroke="#6b6b76" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <path d="M 792,472 H 808 Q 816,472 816,480 V 568 Q 816,576 824,576 H 840"
+        fill="none" stroke="#b06b00" stroke-width="1.6" marker-end="url(#arrow-accent)"/>
+  <line x1="792" y1="600" x2="840" y2="600" stroke="#b06b00" stroke-width="1.6" marker-end="url(#arrow-accent)"/>
+  <path d="M 792,728 H 808 Q 816,728 816,720 V 632 Q 816,624 824,624 H 840"
+        fill="none" stroke="#b06b00" stroke-width="1.6" marker-end="url(#arrow-accent)"/>
+
+  <line x1="1048" y1="600" x2="1096" y2="600" stroke="#6b6b76" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="1304" y1="600" x2="1352" y2="600" stroke="#6b6b76" stroke-width="1.6" marker-end="url(#arrow)"/>
+  <line x1="1560" y1="600" x2="1608" y2="600" stroke="#6b6b76" stroke-width="1.6" marker-end="url(#arrow)"/>
+
+  <!-- arrow labels — mask sits 8px above the stroke -->
+  <rect x="272" y="576" width="48" height="16" rx="2" fill="#ffffff"/>
+  <text x="296" y="588" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".06em">30 FPS</text>
+
+  <rect x="1052" y="576" width="40" height="16" rx="2" fill="#ffffff"/>
+  <text x="1072" y="588" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".06em">2.2 S</text>
+
+  <rect x="1564" y="576" width="40" height="16" rx="2" fill="#ffffff"/>
+  <text x="1584" y="588" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".06em">0.9 S</text>
+
+  <!-- ===== nodes ===== -->
+  <!-- 1 Camera -->
+  <rect x="104" y="552" width="160" height="96" rx="8" fill="#ffffff"/>
+  <rect x="104" y="552" width="160" height="96" rx="8" fill="rgba(26,26,31,0.04)" stroke="#9a9aa4" stroke-width="1.2"/>
+  <rect x="120" y="568" width="32" height="16" rx="2" fill="transparent" stroke="rgba(154,154,164,0.8)" stroke-width="1"/>
+  <text x="136" y="580" fill="#6b6b76" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".08em">IN</text>
+  <text x="184" y="612" fill="#1a1a1f" font-size="24" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Camera</text>
+  <text x="184" y="636" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle">live feed</text>
+
+  <!-- 2 Pre-processing -->
+  <rect x="328" y="552" width="208" height="96" rx="8" fill="#ffffff"/>
+  <rect x="328" y="552" width="208" height="96" rx="8" fill="#ffffff" stroke="#1a1a1f" stroke-width="1.2"/>
+  <rect x="344" y="568" width="40" height="16" rx="2" fill="transparent" stroke="rgba(26,26,31,0.4)" stroke-width="1"/>
+  <text x="364" y="580" fill="#6b6b76" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".08em">PRE</text>
+  <text x="432" y="612" fill="#1a1a1f" font-size="24" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Pre-processing</text>
+  <text x="432" y="636" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle">768px · frame diff</text>
+
+  <!-- 3 Emotion -->
+  <rect x="584" y="428" width="208" height="88" rx="8" fill="#ffffff"/>
+  <rect x="584" y="428" width="208" height="88" rx="8" fill="#ffffff" stroke="#1a1a1f" stroke-width="1.2"/>
+  <rect x="600" y="444" width="32" height="16" rx="2" fill="transparent" stroke="rgba(26,26,31,0.4)" stroke-width="1"/>
+  <text x="616" y="456" fill="#6b6b76" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".08em">01</text>
+  <text x="688" y="484" fill="#1a1a1f" font-size="24" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Emotion</text>
+  <text x="688" y="508" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle">MediaPipe + Gemini</text>
+
+  <!-- 4 Body Language -->
+  <rect x="584" y="556" width="208" height="88" rx="8" fill="#ffffff"/>
+  <rect x="584" y="556" width="208" height="88" rx="8" fill="#ffffff" stroke="#1a1a1f" stroke-width="1.2"/>
+  <rect x="600" y="572" width="32" height="16" rx="2" fill="transparent" stroke="rgba(26,26,31,0.4)" stroke-width="1"/>
+  <text x="616" y="584" fill="#6b6b76" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".08em">02</text>
+  <text x="688" y="612" fill="#1a1a1f" font-size="24" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Body Language</text>
+  <text x="688" y="636" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle">YOLO11-Pose</text>
+
+  <!-- 5 Environment -->
+  <rect x="584" y="684" width="208" height="88" rx="8" fill="#ffffff"/>
+  <rect x="584" y="684" width="208" height="88" rx="8" fill="#ffffff" stroke="#1a1a1f" stroke-width="1.2"/>
+  <rect x="600" y="700" width="32" height="16" rx="2" fill="transparent" stroke="rgba(26,26,31,0.4)" stroke-width="1"/>
+  <text x="616" y="712" fill="#6b6b76" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".08em">03</text>
+  <text x="688" y="740" fill="#1a1a1f" font-size="24" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Environment</text>
+  <text x="688" y="764" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle">YOLO11</text>
+
+  <!-- 6 Context Fusion — FOCAL -->
+  <rect x="840" y="552" width="208" height="96" rx="8" fill="#ffffff"/>
+  <rect x="840" y="552" width="208" height="96" rx="8" fill="rgba(255,176,32,0.18)" stroke="#b06b00" stroke-width="1.6"/>
+  <rect x="856" y="568" width="48" height="16" rx="2" fill="transparent" stroke="rgba(176,107,0,0.5)" stroke-width="1"/>
+  <text x="880" y="580" fill="#b06b00" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".08em">FUSE</text>
+  <text x="944" y="612" fill="#1a1a1f" font-size="24" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Context Fusion</text>
+  <text x="944" y="636" fill="#b06b00" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle">three signals · one state</text>
+
+  <!-- 7 Narrative -->
+  <rect x="1096" y="552" width="208" height="96" rx="8" fill="#ffffff"/>
+  <rect x="1096" y="552" width="208" height="96" rx="8" fill="#ffffff" stroke="#1a1a1f" stroke-width="1.2"/>
+  <rect x="1112" y="568" width="40" height="16" rx="2" fill="transparent" stroke="rgba(26,26,31,0.4)" stroke-width="1"/>
+  <text x="1132" y="580" fill="#6b6b76" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".08em">LLM</text>
+  <text x="1200" y="612" fill="#1a1a1f" font-size="24" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Narrative</text>
+  <text x="1200" y="636" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle">gemini-3.1-flash-lite</text>
+
+  <!-- 8 Priority Filter -->
+  <rect x="1352" y="552" width="208" height="96" rx="8" fill="#ffffff"/>
+  <rect x="1352" y="552" width="208" height="96" rx="8" fill="#ffffff" stroke="#1a1a1f" stroke-width="1.2"/>
+  <rect x="1368" y="568" width="52" height="16" rx="2" fill="transparent" stroke="rgba(26,26,31,0.4)" stroke-width="1"/>
+  <text x="1394" y="580" fill="#6b6b76" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".08em">FILTER</text>
+  <text x="1456" y="612" fill="#1a1a1f" font-size="24" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Priority Filter</text>
+  <text x="1456" y="636" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle">danger first</text>
+
+  <!-- 9 Thai Speech — FOCAL -->
+  <rect x="1608" y="552" width="208" height="96" rx="8" fill="#ffffff"/>
+  <rect x="1608" y="552" width="208" height="96" rx="8" fill="rgba(255,176,32,0.18)" stroke="#b06b00" stroke-width="1.6"/>
+  <rect x="1624" y="568" width="40" height="16" rx="2" fill="transparent" stroke="rgba(176,107,0,0.5)" stroke-width="1"/>
+  <text x="1644" y="580" fill="#b06b00" font-size="8" font-family="'Geist Mono', monospace" text-anchor="middle" letter-spacing=".08em">OUT</text>
+  <text x="1712" y="612" fill="#1a1a1f" font-size="24" font-weight="600" font-family="'Geist', sans-serif" text-anchor="middle">Thai Speech</text>
+  <text x="1712" y="636" fill="#b06b00" font-size="12" font-family="'Geist Mono', monospace" text-anchor="middle">edge-tts · th-TH-Niwat</text>
+
+  <!-- ===== legend ===== -->
+  <line x1="104" y1="912" x2="1816" y2="912" stroke="rgba(26,26,31,0.12)" stroke-width="1"/>
+  <text x="104" y="944" fill="#6b6b76" font-size="12" font-family="'Geist Mono', monospace" letter-spacing=".14em">LEGEND</text>
+
+  <rect x="256" y="932" width="16" height="14" rx="2" fill="rgba(26,26,31,0.04)" stroke="#9a9aa4" stroke-width="1.2"/>
+  <text x="284" y="944" fill="#6b6b76" font-size="12" font-family="'Geist', sans-serif">Input</text>
+
+  <rect x="416" y="932" width="16" height="14" rx="2" fill="#ffffff" stroke="#1a1a1f" stroke-width="1.2"/>
+  <text x="444" y="944" fill="#6b6b76" font-size="12" font-family="'Geist', sans-serif">Processing step</text>
+
+  <rect x="656" y="932" width="16" height="14" rx="2" fill="rgba(255,176,32,0.18)" stroke="#b06b00" stroke-width="1.6"/>
+  <text x="684" y="944" fill="#6b6b76" font-size="12" font-family="'Geist', sans-serif">Where the system earns its name</text>
+
+  <line x1="1000" y1="939" x2="1036" y2="939" stroke="#b06b00" stroke-width="1.6"/>
+  <text x="1048" y="944" fill="#6b6b76" font-size="12" font-family="'Geist', sans-serif">The stretch that turns detection into meaning</text>
+</svg>
+</body>
+</html>

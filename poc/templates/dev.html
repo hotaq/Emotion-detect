@@ -1,0 +1,64 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Emotion Vision — dev</title>
+<style>
+  body { margin:0; padding:16px; background:#0f0f10; color:#e8e8e8; font:14px/1.6 ui-monospace,monospace; }
+  .row { display:flex; gap:16px; flex-wrap:wrap; align-items:flex-start; }
+  img { width:640px; max-width:100%; border-radius:10px; background:#000; }
+  .panel { flex:1; min-width:320px; }
+  b { color:#fff; } .k { color:#8a8a8a; }
+  #narr { font-size:1.15rem; color:#7ee787; padding:10px 0; }
+  pre { background:#17171a; padding:10px; border-radius:8px; overflow:auto; max-height:40vh; }
+  button,select { font:inherit; padding:6px 12px; border-radius:8px;
+                  border:1px solid #333; background:#1c1c20; color:#eee; }
+</style>
+
+<div class="row">
+  <img src="/video?dev=1" alt="กล้องสด พร้อมกรอบ YOLO">
+  <div class="panel">
+    <p>
+      <button onclick="post('/toggle')">▶︎ / ■</button>
+      กล้อง <select id="cam" onchange="cfg({cam:+cam.value})">
+        {% for c in cams %}<option value="{{c}}">กล้อง {{c}}</option>{% endfor %}</select>
+      ทุก <select id="every" onchange="cfg({every:+every.value})">
+        {% for s in [3,5,8,10,15,30] %}<option value="{{s}}">{{s}}s</option>{% endfor %}</select>
+      <select id="model" onchange="cfg({model:model.value})">
+        {% for m in models %}<option value="{{m}}">{{m}}</option>{% endfor %}</select>
+      <button onclick="cfg({forget:1})">🧹 ล้างความจำ</button>
+      <label><input type="checkbox" id="faston" onchange="cfg({fast_on:faston.checked})"> สายเร็ว</label>
+      <br>ภาพนิ่งถ้าต่ำกว่า <input id="still" type="number" step=".01" style="width:5em"
+        onchange="cfg({still:+still.value})"> · เปลี่ยนฉากถ้าเกิน <input id="scene" type="number"
+        step=".01" style="width:5em" onchange="cfg({scene:+scene.value})">
+      <button onclick="cfg({recalibrate:1})">🎚️ วัด noise ใหม่</button>
+    </p>
+    <div id="stat"></div>
+    <div id="narr"></div>
+    <p class="k">ความจำสะสม</p><pre id="mem"></pre>
+    <p class="k">Result JSON</p><pre id="json"></pre>
+  </div>
+</div>
+
+<script>
+  const post = (u,b) => fetch(u,{method:"POST",headers:{"Content-Type":"application/json"},
+                               body:JSON.stringify(b||{})}).then(r=>r.json()).then(draw);
+  const cfg = b => post("/config", b);
+
+  function draw(s) {
+    stat.innerHTML = `<b>${s.running?"▶︎ ทำงาน":"■ หยุด"}</b> · ${s.fps} FPS ·
+      ${s.stage} · สำเร็จ <b>${s.n}</b> (ล่าสุด ${s.lat}s) ·
+      ซ้ำ ${s.dup} · พลาด ${s.timeouts}<br>
+      ภาพเปลี่ยน <b>${s.change}</b> → โหมด <b>${s.mode}</b> · ข้ามเพราะนิ่ง ${s.skipped_still}<br>
+      <b style="color:#ffb020">สายเร็ว ${s.fast_ms} ms · พูดไป ${s.fast_n} ครั้ง · "${s.fast_text||"—"}"</b><br>
+      noise ${s.noise} ${s.auto ? "(auto)" : "(ตั้งเอง)"} → นิ่ง&lt;${s.still} · ฉาก≥${s.scene} · เตือน≥${s.alert}` + (s.err ? `<br><span style="color:#ff7b72">${s.err}</span>` : "");
+    narr.textContent = s.narrative || "—";
+    mem.textContent = (s.summary || "(ยังไม่มีสรุป)") + "\n\n" + s.recent.map(r=>"• "+r).join("\n");
+    json.textContent = JSON.stringify(s.result, null, 2);
+    cam.value = s.cam; every.value = s.every; model.value = s.model;
+    faston.checked = s.fast_on;
+    if (document.activeElement !== still) still.value = s.still;
+    if (document.activeElement !== scene) scene.value = s.scene;
+  }
+  const poll = () => fetch("/state").then(r=>r.json()).then(draw).catch(()=>{});
+  poll(); setInterval(poll, 500);
+</script>

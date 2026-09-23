@@ -1,0 +1,51 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Emotion Vision</title>
+<style>
+  :root { color-scheme: dark; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  body { margin:0; background:#000; color:#fff; height:100dvh; display:flex; flex-direction:column;
+         font-family:-apple-system,"Noto Sans Thai",sans-serif; overflow:hidden; }
+  #hit { flex:1; width:100%; border:0; background:#000; color:#fff; cursor:pointer;
+         display:flex; align-items:center; justify-content:center;
+         font-size:clamp(1.6rem,6vw,2.6rem); font-weight:600; font-family:inherit; }
+  #hit:focus-visible { outline:4px solid #fff; outline-offset:-12px; }
+  #wave { display:none; gap:5px; align-items:center; height:34vh; }
+  #wave i { width:6px; border-radius:3px; background:#fff; animation:w .9s ease-in-out infinite; }
+  @keyframes w { 0%,100%{height:12%} 50%{height:80%} }
+  @media (prefers-reduced-motion:reduce){ #wave i{ animation:none; height:45%; } }
+  #fast { color:#ffb020; font-size:clamp(1.1rem,3.4vw,1.6rem); font-weight:600;
+          text-align:center; padding:1.5vh 6vw 0; min-height:4vh; }
+  #narr { padding:2vh 6vw calc(4vh + env(safe-area-inset-bottom));
+          font-size:clamp(1.2rem,3.8vw,1.8rem); line-height:1.7; text-align:center; min-height:26vh; }
+  #hint { color:#6b6b6b; font-size:.95rem; text-align:center; padding-bottom:2vh; }
+</style>
+
+<button id="hit" aria-describedby="narr">
+  <span id="label">กดเพื่อทำงาน</span>
+  <span id="wave" role="status" aria-label="กำลังพูด"></span>
+</button>
+<div id="fast" role="status" aria-live="assertive"></div>
+<div id="narr" role="status" aria-live="polite"></div>
+<div id="hint"></div>
+
+<script>
+  wave.innerHTML = Array.from({length:12}, (_,i) =>
+    `<i style="animation-delay:${(i*0.07).toFixed(2)}s"></i>`).join("");
+
+  hit.onclick = () => fetch("/toggle", {method:"POST"}).then(r => r.json()).then(draw);
+
+  function draw(s) {
+    const speaking = s.running && s.speaking;
+    wave.style.display = speaking ? "flex" : "none";
+    label.style.display = speaking ? "none" : "block";
+    label.textContent = s.running ? "แตะเพื่อหยุด" : "กดเพื่อทำงาน";
+    fast.textContent = s.running ? (s.fast_text || "") : "";
+    narr.textContent = s.running ? (s.narrative || "กำลังดูสิ่งรอบตัว…") : "";
+    hint.textContent = s.err || (!s.has_key ? "ยังไม่ได้ใส่ GEMINI_API_KEY ใน .env"
+                     : s.running ? (s.busy ? "กำลังคิด…" : "") : "แตะหน้าจอเพื่อเริ่ม");
+  }
+  const poll = () => fetch("/state").then(r => r.json()).then(draw).catch(()=>{});
+  poll(); setInterval(poll, 400);
+</script>

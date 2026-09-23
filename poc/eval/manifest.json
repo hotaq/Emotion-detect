@@ -1,0 +1,250 @@
+[
+  {
+    "file": "emotion_0.jpg",
+    "group": "emotion",
+    "query": "smiling face portrait",
+    "k": 4,
+    "title": "rachel smiling",
+    "license": "by",
+    "creator": ".jocelyn.",
+    "source": "https://www.flickr.com/photos/27302421@N04/6513328761"
+  },
+  {
+    "file": "emotion_1.jpg",
+    "group": "emotion",
+    "query": "crying person face",
+    "k": 1,
+    "title": "My Oh Face",
+    "license": "by",
+    "creator": "greggoconnell",
+    "source": "https://www.flickr.com/photos/72511655@N00/863846941"
+  },
+  {
+    "file": "emotion_2.jpg",
+    "group": "emotion",
+    "query": "angry face person",
+    "k": 3,
+    "title": "Angry @ The Terrorists",
+    "license": "by",
+    "creator": "greggoconnell",
+    "source": "https://www.flickr.com/photos/72511655@N00/221521979"
+  },
+  {
+    "file": "emotion_3.jpg",
+    "group": "emotion",
+    "query": "surprised face person",
+    "k": 0,
+    "title": "Shout 2",
+    "license": "by",
+    "creator": "andrew_mc_d",
+    "source": "https://www.flickr.com/photos/7727068@N03/452713618"
+  },
+  {
+    "file": "emotion_4.jpg",
+    "group": "emotion",
+    "query": "sad face portrait",
+    "k": 3,
+    "title": "india sad",
+    "license": "by",
+    "creator": "apdk",
+    "source": "https://www.flickr.com/photos/62337512@N00/3462897583"
+  },
+  {
+    "file": "emotion_5.jpg",
+    "group": "emotion",
+    "query": "laughing people",
+    "k": 6,
+    "title": "Child laughing",
+    "license": "by",
+    "creator": "cheriejoyful",
+    "source": "https://www.flickr.com/photos/12842205@N08/6019067180"
+  },
+  {
+    "file": "body_0.jpg",
+    "group": "body",
+    "query": "people shaking hands",
+    "k": 4,
+    "title": "Business people shaking hands in agreement",
+    "license": "by",
+    "creator": "Rawpixel Ltd",
+    "source": "https://www.flickr.com/photos/147875007@N03/45739298092"
+  },
+  {
+    "file": "body_1.jpg",
+    "group": "body",
+    "query": "two people hugging",
+    "k": 3,
+    "title": "worth a thousand words",
+    "license": "by",
+    "creator": "j3ssl33",
+    "source": "https://www.flickr.com/photos/86251769@N00/403089292"
+  },
+  {
+    "file": "body_2.jpg",
+    "group": "body",
+    "query": "person with folded arms portrait",
+    "k": 0,
+    "title": "Business",
+    "license": "by",
+    "creator": "citirecruitment",
+    "source": "https://www.flickr.com/photos/125303894@N06/14387365942"
+  },
+  {
+    "file": "body_3.jpg",
+    "group": "body",
+    "query": "woman waving hello",
+    "k": 3,
+    "title": "Kim Yu-Na Time David Shankbone 2010 NYC",
+    "license": "by",
+    "creator": "david_shankbone",
+    "source": "https://www.flickr.com/photos/27865228@N06/4597055957"
+  },
+  {
+    "file": "body_4.jpg",
+    "group": "body",
+    "query": "people queue line waiting",
+    "k": 1,
+    "title": "Queue",
+    "license": "by-sa",
+    "creator": "gadl",
+    "source": "https://www.flickr.com/photos/24183489@N00/89650415"
+  },
+  {
+    "file": "body_5.jpg",
+    "group": "body",
+    "query": "people talking together",
+    "k": 1,
+    "title": "Leader of the Free World",
+    "license": "by",
+    "creator": "jurvetson",
+    "source": "https://www.flickr.com/photos/44124348109@N01/544791833"
+  },
+  {
+    "file": "env_0.jpg",
+    "group": "env",
+    "query": "coffee shop interior customers",
+    "k": 1,
+    "title": "Coffee beans for sale - Brother Baba Budan",
+    "license": "by-sa",
+    "creator": "avlxyz",
+    "source": "https://www.flickr.com/photos/10559879@N00/3223826525"
+  },
+  {
+    "file": "env_1.jpg",
+    "group": "env",
+    "query": "hospital waiting room",
+    "k": 4,
+    "title": "CCBRT Disability Hospital waiting room 1 (10679012155)",
+    "license": "by",
+    "creator": "Department of Foreign Affairs and Trade",
+    "source": "https://commons.wikimedia.org/w/index.php?curid=32167769"
+  },
+  {
+    "file": "env_2.jpg",
+    "group": "env",
+    "query": "train station platform crowd",
+    "k": 3,
+    "title": "Detrained",
+    "license": "by-sa",
+    "creator": "tompagenet",
+    "source": "https://www.flickr.com/photos/73422480@N00/54805695"
+  },
+  {
+    "file": "env_3.jpg",
+    "group": "env",
+    "query": "office meeting room people",
+    "k": 7,
+    "title": "Reunión de la CIDH con el gobierno mexicano",
+    "license": "by",
+    "creator": "Comisión Interamericana de Derechos Humanos",
+    "source": "https://www.flickr.com/photos/52239432@N05/21797798286"
+  },
+  {
+    "file": "env_4.jpg",
+    "group": "env",
+    "query": "busy city sidewalk pedestrians",
+    "k": 4,
+    "title": "Fixed Gear on 5th Ave Sidewalk",
+    "license": "by-sa",
+    "creator": "Seth W.",
+    "source": "https://www.flickr.com/photos/62999165@N00/28882460"
+  },
+  {
+    "file": "env_5.jpg",
+    "group": "env",
+    "query": "supermarket aisle shopper",
+    "k": 0,
+    "title": "Walmart Shoppers Notice Signs Promoting Everyday Low Prices Around the Store",
+    "license": "by",
+    "creator": "Walmart Corporate",
+    "source": "https://www.flickr.com/photos/50128414@N05/5684145463"
+  },
+  {
+    "file": "nolabel_0.jpg",
+    "group": "nolabel",
+    "query": "empty corridor building",
+    "k": 1,
+    "title": "Custer County High School, Miles City",
+    "license": "by",
+    "creator": "dave_mcmt",
+    "source": "https://www.flickr.com/photos/30512529@N00/187428751"
+  },
+  {
+    "file": "nolabel_1.jpg",
+    "group": "nolabel",
+    "query": "staircase indoor",
+    "k": 1,
+    "title": "Edwardian Hallway in Redhill - Oct 2013 - The Naked Staircase - From the Top",
+    "license": "by",
+    "creator": "Gareth1953 All Right Now",
+    "source": "https://www.flickr.com/photos/40837632@N05/11351510713"
+  },
+  {
+    "file": "nolabel_2.jpg",
+    "group": "nolabel",
+    "query": "construction barrier sidewalk",
+    "k": 2,
+    "title": "Sidewalk Closed",
+    "license": "by",
+    "creator": "brownpau",
+    "source": "https://www.flickr.com/photos/44124483743@N01/6347642970"
+  },
+  {
+    "file": "nolabel_3.jpg",
+    "group": "nolabel",
+    "query": "wet floor caution sign",
+    "k": 0,
+    "title": "Yellow wet floor caution sign in English",
+    "license": "by-sa",
+    "creator": "BrokenSphere",
+    "source": "https://commons.wikimedia.org/w/index.php?curid=3966788"
+  },
+  {
+    "file": "nolabel_4.jpg",
+    "group": "nolabel",
+    "query": "empty classroom desks",
+    "k": 0,
+    "title": "UF McCarty Desks Classroom",
+    "license": "by",
+    "creator": "cdsessums",
+    "source": "https://www.flickr.com/photos/53313745@N00/4475297000"
+  },
+  {
+    "file": "nolabel_5.jpg",
+    "group": "nolabel",
+    "query": "bicycles parked sidewalk",
+    "k": 1,
+    "title": "SZ 深圳 Shenzhen 福田 Futian Caitian Road bicycle parking sidewalk October 2023 R12S",
+    "license": "by-sa",
+    "creator": "URAIRSIDE PASTEE Harma Laum",
+    "source": "https://commons.wikimedia.org/w/index.php?curid=138938031"
+  },
+  {
+    "file": "emotion_6.jpg",
+    "group": "emotion",
+    "query": "angry frowning face (ผู้ใช้ส่งมาเอง)",
+    "title": "ภาพที่ผู้ใช้ส่งมาทดสอบ 12 ก.ย. 2569",
+    "license": "ผู้ใช้จัดหาเอง — ตรวจสิทธิ์ก่อนใช้ในรายงาน",
+    "creator": "-"
+  }
+]

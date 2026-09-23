@@ -1,0 +1,1 @@
+{ "name": "henjai", "private": true, "type": "module", "engines": { "node": ">=20" } }

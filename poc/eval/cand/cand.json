@@ -1,0 +1,1462 @@
+{
+  "emotion_0": {
+    "query": "smiling face portrait",
+    "group": "emotion",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Implicit smile",
+        "license": "by",
+        "creator": "janoma.cl",
+        "source": "https://www.flickr.com/photos/16982168@N05/4610704956"
+      },
+      {
+        "k": 1,
+        "title": "Doll face",
+        "license": "by",
+        "creator": "Stewart",
+        "source": "https://www.flickr.com/photos/12037949632@N01/95679827"
+      },
+      {
+        "k": 2,
+        "title": "Smile",
+        "license": "by",
+        "creator": "Jan Tik",
+        "source": "https://www.flickr.com/photos/15363357@N00/44587614"
+      },
+      {
+        "k": 3,
+        "title": "portrait",
+        "license": "by",
+        "creator": "fotogrl7D",
+        "source": "https://www.flickr.com/photos/24148850@N07/4257103665"
+      },
+      {
+        "k": 4,
+        "title": "rachel smiling",
+        "license": "by",
+        "creator": ".jocelyn.",
+        "source": "https://www.flickr.com/photos/27302421@N04/6513328761"
+      },
+      {
+        "k": 5,
+        "title": "Smile from Ravangla",
+        "license": "by",
+        "creator": "Sukanto Debnath",
+        "source": "https://www.flickr.com/photos/7487149@N03/1428618309"
+      },
+      {
+        "k": 6,
+        "title": "Faces of the Slums",
+        "license": "by",
+        "creator": "ND Strupler",
+        "source": "https://www.flickr.com/photos/9650814@N04/7743844650"
+      },
+      {
+        "k": 7,
+        "title": "Child",
+        "license": "by",
+        "creator": "||-SAM Nasim-||",
+        "source": "https://www.flickr.com/photos/65732636@N06/6380522077"
+      }
+    ]
+  },
+  "emotion_1": {
+    "query": "crying person face",
+    "group": "emotion",
+    "hits": [
+      {
+        "k": 0,
+        "title": "LEGO 'Cuteness Overload' meme (Free to use)",
+        "license": "pdm",
+        "creator": "Ochre Jelly",
+        "source": "https://www.flickr.com/photos/14691188@N02/21526952108"
+      },
+      {
+        "k": 1,
+        "title": "My Oh Face",
+        "license": "by",
+        "creator": "greggoconnell",
+        "source": "https://www.flickr.com/photos/72511655@N00/863846941"
+      },
+      {
+        "k": 2,
+        "title": "Silver Tears",
+        "license": "by",
+        "creator": "fotologic",
+        "source": "https://www.flickr.com/photos/98318718@N00/393198068"
+      },
+      {
+        "k": 3,
+        "title": "The tears of hope | Las lágrimas de la esperanza | URUGUAY | IMG_0571",
+        "license": "by-sa",
+        "creator": "jikatu",
+        "source": "https://www.flickr.com/photos/7221539@N06/4756737840"
+      },
+      {
+        "k": 4,
+        "title": "Sweet Child 'O Mine - Lyrical Time Wastr",
+        "license": "by",
+        "creator": "C.P.Storm",
+        "source": "https://www.flickr.com/photos/45541705@N00/129236229"
+      },
+      {
+        "k": 5,
+        "title": "eyes",
+        "license": "by",
+        "creator": "shiranai",
+        "source": "https://www.flickr.com/photos/39240342@N08/8081964482"
+      },
+      {
+        "k": 6,
+        "title": "Stitches tell stories",
+        "license": "by",
+        "creator": "vinodvv aka vcube",
+        "source": "https://www.flickr.com/photos/69479888@N00/6789125137"
+      },
+      {
+        "k": 7,
+        "title": "the handwriting of lillie coit",
+        "license": "by",
+        "creator": "B.S. Wise",
+        "source": "https://www.flickr.com/photos/39474253@N00/5008063253"
+      }
+    ]
+  },
+  "emotion_2": {
+    "query": "angry face person",
+    "group": "emotion",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Angry Mean Face",
+        "license": "by-sa",
+        "creator": "chexed",
+        "source": "https://www.flickr.com/photos/9518198@N04/1546923312"
+      },
+      {
+        "k": 1,
+        "title": "fairey poster photo source?",
+        "license": "by-sa",
+        "creator": "stevesimula",
+        "source": "https://www.flickr.com/photos/25105505@N07/3212113517"
+      },
+      {
+        "k": 2,
+        "title": "Angry",
+        "license": "by",
+        "creator": "JelleS",
+        "source": "https://www.flickr.com/photos/12053417@N00/2656101758"
+      },
+      {
+        "k": 3,
+        "title": "Angry @ The Terrorists",
+        "license": "by",
+        "creator": "greggoconnell",
+        "source": "https://www.flickr.com/photos/72511655@N00/221521979"
+      },
+      {
+        "k": 4,
+        "title": "Mad about the Ban",
+        "license": "by",
+        "creator": "Jan Tik",
+        "source": "https://www.flickr.com/photos/15363357@N00/12115306"
+      },
+      {
+        "k": 5,
+        "title": "I don't understand you",
+        "license": "by",
+        "creator": "F L I R S T - Palk Clap",
+        "source": "https://www.flickr.com/photos/36217438@N06/5011114015"
+      },
+      {
+        "k": 6,
+        "title": "Steve",
+        "license": "by",
+        "creator": "Steve Snodgrass",
+        "source": "https://www.flickr.com/photos/10710442@N08/3819843421"
+      },
+      {
+        "k": 7,
+        "title": "Results",
+        "license": "by",
+        "creator": "Team Nerium",
+        "source": "https://www.flickr.com/photos/20116156@N00/7619330614"
+      }
+    ]
+  },
+  "emotion_3": {
+    "query": "surprised face person",
+    "group": "emotion",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Shout 2",
+        "license": "by",
+        "creator": "andrew_mc_d",
+        "source": "https://www.flickr.com/photos/7727068@N03/452713618"
+      },
+      {
+        "k": 1,
+        "title": "Jump Around!",
+        "license": "by",
+        "creator": "Katelyn Fay",
+        "source": "https://www.flickr.com/photos/36439630@N02/3370789421"
+      },
+      {
+        "k": 2,
+        "title": "Elle Macpherson",
+        "license": "by-sa",
+        "creator": "Eva Rinaldi Celebrity Photographer",
+        "source": "https://www.flickr.com/photos/58820009@N05/6217108464"
+      },
+      {
+        "k": 3,
+        "title": "Senator Pia Cayetano",
+        "license": "by",
+        "creator": "roger_alcantara",
+        "source": "https://www.flickr.com/photos/31181425@N00/100304503"
+      },
+      {
+        "k": 4,
+        "title": "HealthStation installation v1",
+        "license": "by",
+        "creator": "juhansonin",
+        "source": "https://www.flickr.com/photos/38869431@N00/457115581"
+      },
+      {
+        "k": 5,
+        "title": "No, not the first day of this effort",
+        "license": "by-sa",
+        "creator": "wbaiv",
+        "source": "https://www.flickr.com/photos/9998127@N06/7485558128"
+      },
+      {
+        "k": 6,
+        "title": "Surprised? More or Less",
+        "license": "by",
+        "creator": "Orin Zebest",
+        "source": "https://www.flickr.com/photos/33917831@N00/2036022196"
+      },
+      {
+        "k": 7,
+        "title": "Surprise!",
+        "license": "by",
+        "creator": "GeoNando",
+        "source": "https://www.flickr.com/photos/23530690@N06/3038032644"
+      }
+    ]
+  },
+  "emotion_4": {
+    "query": "sad face portrait",
+    "group": "emotion",
+    "hits": [
+      {
+        "k": 0,
+        "title": "sad",
+        "license": "by",
+        "creator": "JoePenna",
+        "source": "https://www.flickr.com/photos/27241750@N06/2539202649"
+      },
+      {
+        "k": 1,
+        "title": "Despair",
+        "license": "by-sa",
+        "creator": "fakelvis",
+        "source": "https://www.flickr.com/photos/40933543@N00/2305701220"
+      },
+      {
+        "k": 2,
+        "title": "Inside",
+        "license": "by",
+        "creator": "Andrew Mason",
+        "source": "https://www.flickr.com/photos/34754790@N00/4006709"
+      },
+      {
+        "k": 3,
+        "title": "india sad",
+        "license": "by",
+        "creator": "apdk",
+        "source": "https://www.flickr.com/photos/62337512@N00/3462897583"
+      },
+      {
+        "k": 4,
+        "title": "Sad day",
+        "license": "by",
+        "creator": "Just Taken Pics",
+        "source": "https://www.flickr.com/photos/63797645@N00/221737671"
+      },
+      {
+        "k": 5,
+        "title": "regret",
+        "license": "by-sa",
+        "creator": "exoimperator",
+        "source": "https://www.flickr.com/photos/16683885@N00/7712350110"
+      },
+      {
+        "k": 6,
+        "title": "Sad beauty",
+        "license": "by",
+        "creator": "Kamaljith",
+        "source": "https://www.flickr.com/photos/7980217@N08/5492484118"
+      },
+      {
+        "k": 7,
+        "title": "day 079.",
+        "license": "by",
+        "creator": "H o l l y.",
+        "source": "https://www.flickr.com/photos/48337528@N05/14547579859"
+      }
+    ]
+  },
+  "emotion_5": {
+    "query": "laughing people",
+    "group": "emotion",
+    "hits": [
+      {
+        "k": 0,
+        "title": "More Laughing People.",
+        "license": "by",
+        "creator": "iMorpheus",
+        "source": "https://www.flickr.com/photos/48889077511@N01/356645131"
+      },
+      {
+        "k": 1,
+        "title": "City sidewalks, busy sidewalks Dressed in holiday style In the air there's a feeling of Christmas Children laughing, people passing Meeting smile after smile",
+        "license": "by",
+        "creator": "katerha",
+        "source": "https://www.flickr.com/photos/8489692@N03/6554889247"
+      },
+      {
+        "k": 2,
+        "title": "Laughing people",
+        "license": "by",
+        "creator": "SigNote Cloud",
+        "source": "https://www.flickr.com/photos/63244574@N03/6172321210"
+      },
+      {
+        "k": 3,
+        "title": "Laughing People with Weird Posture",
+        "license": "by-sa",
+        "creator": "CanadaPenguin",
+        "source": "https://www.flickr.com/photos/20324540@N00/3978854007"
+      },
+      {
+        "k": 4,
+        "title": "2023-09-16 Wikipedia Hannover in Bristol meeting, laughing people",
+        "license": "by-sa",
+        "creator": "Bernd Schwabe",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=137840519"
+      },
+      {
+        "k": 5,
+        "title": "Laughing Buddha",
+        "license": "by",
+        "creator": "JasonDGreat",
+        "source": "https://www.flickr.com/photos/16106689@N00/2091324084"
+      },
+      {
+        "k": 6,
+        "title": "Child laughing",
+        "license": "by",
+        "creator": "cheriejoyful",
+        "source": "https://www.flickr.com/photos/12842205@N08/6019067180"
+      },
+      {
+        "k": 7,
+        "title": "Laughing Men",
+        "license": "by",
+        "creator": "tdlucas5000",
+        "source": "https://www.flickr.com/photos/27656017@N02/15115884078"
+      }
+    ]
+  },
+  "body_0": {
+    "query": "people shaking hands",
+    "group": "body",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Business people shaking hands in agreement",
+        "license": "by",
+        "creator": "Rawpixel Ltd",
+        "source": "https://www.flickr.com/photos/147875007@N03/43972154720"
+      },
+      {
+        "k": 1,
+        "title": "Business people shaking hands in agreement",
+        "license": "by",
+        "creator": "Rawpixel Ltd",
+        "source": "https://www.flickr.com/photos/147875007@N03/45739279722"
+      },
+      {
+        "k": 2,
+        "title": "Business people shaking hands in agreement",
+        "license": "by",
+        "creator": "Rawpixel Ltd",
+        "source": "https://www.flickr.com/photos/147875007@N03/43972155520"
+      },
+      {
+        "k": 3,
+        "title": "Business people shaking hands in agreement",
+        "license": "by",
+        "creator": "Rawpixel Ltd",
+        "source": "https://www.flickr.com/photos/147875007@N03/45789233171"
+      },
+      {
+        "k": 4,
+        "title": "Business people shaking hands in agreement",
+        "license": "by",
+        "creator": "Rawpixel Ltd",
+        "source": "https://www.flickr.com/photos/147875007@N03/45739298092"
+      },
+      {
+        "k": 5,
+        "title": "Business people shaking hands in agreement",
+        "license": "by",
+        "creator": "Rawpixel Ltd",
+        "source": "https://www.flickr.com/photos/147875007@N03/45739279912"
+      },
+      {
+        "k": 6,
+        "title": "Business people shaking hands in agreement",
+        "license": "by",
+        "creator": "Rawpixel Ltd",
+        "source": "https://www.flickr.com/photos/147875007@N03/45789231221"
+      },
+      {
+        "k": 7,
+        "title": "Business people shaking hands in agreement",
+        "license": "by",
+        "creator": "Rawpixel Ltd",
+        "source": "https://www.flickr.com/photos/147875007@N03/45789233331"
+      }
+    ]
+  },
+  "body_1": {
+    "query": "two people hugging",
+    "group": "body",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Hug",
+        "license": "by",
+        "creator": "kevin dooley",
+        "source": "https://www.flickr.com/photos/12836528@N00/5128625022"
+      },
+      {
+        "k": 1,
+        "title": "Hug",
+        "license": "by",
+        "creator": "Tania_Cataldo",
+        "source": "https://www.flickr.com/photos/54477015@N08/5607684907"
+      },
+      {
+        "k": 2,
+        "title": "Love for a Donkey, South Africa",
+        "license": "by",
+        "creator": "JenvanW",
+        "source": "https://www.flickr.com/photos/25444043@N02/3074491456"
+      },
+      {
+        "k": 3,
+        "title": "worth a thousand words",
+        "license": "by",
+        "creator": "j3ssl33",
+        "source": "https://www.flickr.com/photos/86251769@N00/403089292"
+      },
+      {
+        "k": 4,
+        "title": "CL Society 193: Brothers",
+        "license": "by",
+        "creator": "francisco_osorio",
+        "source": "https://www.flickr.com/photos/30330906@N04/6851753737"
+      },
+      {
+        "k": 5,
+        "title": "9/52 - Mom's Hug",
+        "license": "by-sa",
+        "creator": "Monkey Mash Button",
+        "source": "https://www.flickr.com/photos/62698615@N08/5900944674"
+      },
+      {
+        "k": 6,
+        "title": "Group Hug",
+        "license": "by",
+        "creator": "cheetah100",
+        "source": "https://www.flickr.com/photos/58982967@N00/74685966"
+      },
+      {
+        "k": 7,
+        "title": "people",
+        "license": "by",
+        "creator": "davedehetre",
+        "source": "https://www.flickr.com/photos/22433418@N04/4943459504"
+      }
+    ]
+  },
+  "body_2": {
+    "query": "person with folded arms portrait",
+    "group": "body",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Business",
+        "license": "by",
+        "creator": "citirecruitment",
+        "source": "https://www.flickr.com/photos/125303894@N06/14387365942"
+      },
+      {
+        "k": 1,
+        "title": "Business Woman",
+        "license": "by",
+        "creator": "citirecruitment",
+        "source": "https://www.flickr.com/photos/125303894@N06/14365668676"
+      },
+      {
+        "k": 2,
+        "title": "Portret van Sanne Bruinier (1926)",
+        "license": "cc0",
+        "creator": "rijksmuseum",
+        "source": "https://www.rawpixel.com/image/13762647/portret-van-sanne-bruinier-1926-bertha-van-hasselt"
+      },
+      {
+        "k": 3,
+        "title": "Self-Portrait Folded Arms, 1926 ottilie",
+        "license": "cc0",
+        "creator": null,
+        "source": "https://www.rawpixel.com/image/18948432/self-portrait-with-folded-arms-1926-ottilie-roederstein"
+      },
+      {
+        "k": 4,
+        "title": "standing male nude cloak: arms",
+        "license": "cc0",
+        "creator": null,
+        "source": "https://www.rawpixel.com/image/13954014/image-face-person-cross"
+      },
+      {
+        "k": 5,
+        "title": "Portrait Two Seated Men Their",
+        "license": "cc0",
+        "creator": "thegetty",
+        "source": "https://www.rawpixel.com/image/14274188/portrait-two-seated-men-with-their-arms-folded"
+      },
+      {
+        "k": 6,
+        "title": "Portrait Man, Full-length, Facing Left",
+        "license": "cc0",
+        "creator": "themet",
+        "source": "https://www.rawpixel.com/image/8031020/image-paper-person-art"
+      },
+      {
+        "k": 7,
+        "title": "man wearing coat top hat",
+        "license": "cc0",
+        "creator": null,
+        "source": "https://www.rawpixel.com/image/14013290/man-wearing-coat-and-top-hat-standing-with-his-arms-folded-etching"
+      }
+    ]
+  },
+  "body_3": {
+    "query": "woman waving hello",
+    "group": "body",
+    "hits": [
+      {
+        "k": 0,
+        "title": "/wave",
+        "license": "by",
+        "creator": "striatic",
+        "source": "https://www.flickr.com/photos/34427466731@N01/2134277457"
+      },
+      {
+        "k": 1,
+        "title": "Milf Graffiti",
+        "license": "by",
+        "creator": "darkday.",
+        "source": "https://www.flickr.com/photos/99649389@N02/15500486340"
+      },
+      {
+        "k": 2,
+        "title": "night wave",
+        "license": "by",
+        "creator": "Rennett Stowe",
+        "source": "https://www.flickr.com/photos/10393601@N08/2684669379"
+      },
+      {
+        "k": 3,
+        "title": "Kim Yu-Na Time David Shankbone 2010 NYC",
+        "license": "by",
+        "creator": "david_shankbone",
+        "source": "https://www.flickr.com/photos/27865228@N06/4597055957"
+      },
+      {
+        "k": 4,
+        "title": "Who's thirsty ? - Greenwich Park",
+        "license": "by-sa",
+        "creator": "alisdare1",
+        "source": "https://www.flickr.com/photos/59952459@N08/52290399304"
+      },
+      {
+        "k": 5,
+        "title": "DSCN2845",
+        "license": "by",
+        "creator": "bsabarnowl",
+        "source": "https://www.flickr.com/photos/10966541@N02/3229622051"
+      },
+      {
+        "k": 6,
+        "title": "Dairy Cow Wave",
+        "license": "by",
+        "creator": "USDAgov",
+        "source": "https://www.flickr.com/photos/41284017@N08/8979096249"
+      },
+      {
+        "k": 7,
+        "title": "'Good morning!' at the river",
+        "license": "by",
+        "creator": "GerryT",
+        "source": "https://www.flickr.com/photos/99326392@N00/191480917"
+      }
+    ]
+  },
+  "body_4": {
+    "query": "people queue line waiting",
+    "group": "body",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Queue",
+        "license": "by",
+        "creator": "oatsy40",
+        "source": "https://www.flickr.com/photos/68089229@N06/8626835475"
+      },
+      {
+        "k": 1,
+        "title": "Queue",
+        "license": "by-sa",
+        "creator": "gadl",
+        "source": "https://www.flickr.com/photos/24183489@N00/89650415"
+      },
+      {
+        "k": 2,
+        "title": "Redhill Marks & Spencer - Jan 2014 - Wife Waiting in Line",
+        "license": "by",
+        "creator": "Gareth1953 All Right Now",
+        "source": "https://www.flickr.com/photos/40837632@N05/12844007284"
+      },
+      {
+        "k": 3,
+        "title": "Redhill Marks & Spencer - Jan 2014 - The Style Council Assemble",
+        "license": "by",
+        "creator": "Gareth1953 All Right Now",
+        "source": "https://www.flickr.com/photos/40837632@N05/12844004884"
+      },
+      {
+        "k": 4,
+        "title": "Lining up",
+        "license": "by",
+        "creator": "blondinrikard",
+        "source": "https://www.flickr.com/photos/44093058@N06/13908296670"
+      },
+      {
+        "k": 5,
+        "title": "The Phoenix Symphony is watching you",
+        "license": "by",
+        "creator": "kevin dooley",
+        "source": "https://www.flickr.com/photos/12836528@N00/8479103468"
+      },
+      {
+        "k": 6,
+        "title": "San Diego Comic-Con International 2012: Queueing",
+        "license": "by",
+        "creator": "kevin dooley",
+        "source": "https://www.flickr.com/photos/12836528@N00/7580270680"
+      },
+      {
+        "k": 7,
+        "title": "Airport delay: crowded terminal",
+        "license": "by",
+        "creator": "Mark Hodson Photos",
+        "source": "https://www.flickr.com/photos/20538653@N00/3388029136"
+      }
+    ]
+  },
+  "body_5": {
+    "query": "people talking together",
+    "group": "body",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Talking on the edge in Zurich",
+        "license": "by-sa",
+        "creator": "Alexandre Dulaunoy",
+        "source": "https://www.flickr.com/photos/31797858@N00/12528646393"
+      },
+      {
+        "k": 1,
+        "title": "Leader of the Free World",
+        "license": "by",
+        "creator": "jurvetson",
+        "source": "https://www.flickr.com/photos/44124348109@N01/544791833"
+      },
+      {
+        "k": 2,
+        "title": "People talking",
+        "license": "by",
+        "creator": "David Locke",
+        "source": "https://www.flickr.com/photos/7170162@N02/482773863"
+      },
+      {
+        "k": 3,
+        "title": "Piazza in Rome - May 2015 - Smile",
+        "license": "by",
+        "creator": "Gareth1953 All Right Now",
+        "source": "https://www.flickr.com/photos/40837632@N05/36923135551"
+      },
+      {
+        "k": 4,
+        "title": "Girl Talk @ Terminal 5",
+        "license": "by",
+        "creator": "dpstyles™",
+        "source": "https://www.flickr.com/photos/77725780@N00/3043024831"
+      },
+      {
+        "k": 5,
+        "title": "True friendship is sitting together in silence and feeling like it was the best conversation you've ever had.",
+        "license": "by",
+        "creator": "VinothChandar",
+        "source": "https://www.flickr.com/photos/44345361@N06/5210619215"
+      },
+      {
+        "k": 6,
+        "title": "Govanhill photoshoot at the Arches, Glasgow: The Group",
+        "license": "by",
+        "creator": "TheArches",
+        "source": "https://www.flickr.com/photos/39947899@N06/5907952019"
+      },
+      {
+        "k": 7,
+        "title": "Men Are Just Happier People . MMOW . 30apr00",
+        "license": "by",
+        "creator": "Elvert Barnes",
+        "source": "https://www.flickr.com/photos/95413346@N00/35326068"
+      }
+    ]
+  },
+  "env_0": {
+    "query": "coffee shop interior customers",
+    "group": "env",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Sea Breeze Cafe",
+        "license": "by",
+        "creator": "nattu",
+        "source": "https://www.flickr.com/photos/33345813@N00/2828488127"
+      },
+      {
+        "k": 1,
+        "title": "Coffee beans for sale - Brother Baba Budan",
+        "license": "by-sa",
+        "creator": "avlxyz",
+        "source": "https://www.flickr.com/photos/10559879@N00/3223826525"
+      },
+      {
+        "k": 2,
+        "title": "Coffee shop, interior",
+        "license": "by-sa",
+        "creator": "La Citta Vita",
+        "source": "https://www.flickr.com/photos/49539505@N04/5852209501"
+      },
+      {
+        "k": 3,
+        "title": "Barista, customer, chairs hanging from the ceiling - Brother Baba Budan",
+        "license": "by-sa",
+        "creator": "avlxyz",
+        "source": "https://www.flickr.com/photos/10559879@N00/3223822777"
+      },
+      {
+        "k": 4,
+        "title": "Small team gets BLM firetrucks to America’s wildfires",
+        "license": "by",
+        "creator": "BLM Oregon & Washington",
+        "source": "https://www.flickr.com/photos/50169152@N06/22416145698"
+      },
+      {
+        "k": 5,
+        "title": "Folded and umbrellas and wood tables",
+        "license": "by",
+        "creator": "winecountrymedia",
+        "source": "https://www.flickr.com/photos/136394702@N02/23306065532"
+      },
+      {
+        "k": 6,
+        "title": "Decor - SMXL",
+        "license": "by-sa",
+        "creator": "avlxyz",
+        "source": "https://www.flickr.com/photos/10559879@N00/2544135743"
+      },
+      {
+        "k": 7,
+        "title": "Coffee Grinda'",
+        "license": "by",
+        "creator": "Flounder's Bricks",
+        "source": "https://www.flickr.com/photos/157013498@N02/50009911467"
+      }
+    ]
+  },
+  "env_1": {
+    "query": "hospital waiting room",
+    "group": "env",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Hospital waiting room",
+        "license": "by",
+        "creator": "Gareth.D.Jones",
+        "source": "https://www.flickr.com/photos/54517346@N06/5064296031"
+      },
+      {
+        "k": 1,
+        "title": "ELWA Hospital Waiting Room",
+        "license": "by",
+        "creator": "SIM Leadership & Services",
+        "source": "https://www.flickr.com/photos/117080429@N03/14644054399"
+      },
+      {
+        "k": 2,
+        "title": "Broken chair in a hospital waiting room. Bad healthcare",
+        "license": "by",
+        "creator": "Ivan Radic",
+        "source": "https://www.flickr.com/photos/26344495@N05/46002439975"
+      },
+      {
+        "k": 3,
+        "title": "Alone in the hospital waiting room.",
+        "license": "by",
+        "creator": "Seth1492",
+        "source": "https://www.flickr.com/photos/28674126@N02/6081094288"
+      },
+      {
+        "k": 4,
+        "title": "CCBRT Disability Hospital waiting room 1 (10679012155)",
+        "license": "by",
+        "creator": "Department of Foreign Affairs and Trade",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=32167769"
+      },
+      {
+        "k": 5,
+        "title": "Not a bad view from a hospital waiting room!",
+        "license": "by",
+        "creator": "adamdachis",
+        "source": "https://www.flickr.com/photos/7953937@N04/17341893921"
+      },
+      {
+        "k": 6,
+        "title": "Hospital waiting rooms are so institutionally designed",
+        "license": "by-sa",
+        "creator": "tswicegood",
+        "source": "https://www.flickr.com/photos/18843927@N00/15487739627"
+      },
+      {
+        "k": 7,
+        "title": "Occupational hazard. Will often (okay,almost always) take a moment to look at a magazine that is real estate related...even while in a hospital waiting room (#latergram all are home !) #nycre #nycrebroker #nbre #realestate #marketing #ues #belgianshoes #l",
+        "license": "by",
+        "creator": "Nicole Beauchamp",
+        "source": "https://www.flickr.com/photos/48932385@N07/16471394260"
+      }
+    ]
+  },
+  "env_2": {
+    "query": "train station platform crowd",
+    "group": "env",
+    "hits": [
+      {
+        "k": 0,
+        "title": "People. Lots of them...",
+        "license": "by",
+        "creator": "Diego3336",
+        "source": "https://www.flickr.com/photos/31018257@N00/10894491593"
+      },
+      {
+        "k": 1,
+        "title": "People. Lots of them...",
+        "license": "by",
+        "creator": "Diego3336",
+        "source": "https://www.flickr.com/photos/31018257@N00/10915927833"
+      },
+      {
+        "k": 2,
+        "title": "Kita Railway Station, Osaka",
+        "license": "by-sa",
+        "creator": "szeke",
+        "source": "https://www.flickr.com/photos/43355249@N00/45027410905"
+      },
+      {
+        "k": 3,
+        "title": "Detrained",
+        "license": "by-sa",
+        "creator": "tompagenet",
+        "source": "https://www.flickr.com/photos/73422480@N00/54805695"
+      },
+      {
+        "k": 4,
+        "title": "PUTRA LRT at KL Sentral (sic)",
+        "license": "by",
+        "creator": "shankar s.",
+        "source": "https://www.flickr.com/photos/77742560@N06/7851580196"
+      },
+      {
+        "k": 5,
+        "title": "Strike Action Causes Crowded Platform",
+        "license": "by-sa",
+        "creator": "simon_music",
+        "source": "https://www.flickr.com/photos/28878339@N00/1639167497"
+      },
+      {
+        "k": 6,
+        "title": "Gandy Dancer Restaurant Outside",
+        "license": "by-sa",
+        "creator": "Counselman Collection",
+        "source": "https://www.flickr.com/photos/80029441@N00/6499810449"
+      },
+      {
+        "k": 7,
+        "title": "A Place Where Very Few People Stand Still",
+        "license": "by",
+        "creator": "Fraser Mummery",
+        "source": "https://www.flickr.com/photos/73014677@N05/6658762065"
+      }
+    ]
+  },
+  "env_3": {
+    "query": "office meeting room people",
+    "group": "env",
+    "hits": [
+      {
+        "k": 0,
+        "title": "meeting pan",
+        "license": "by",
+        "creator": "AMagill",
+        "source": "https://www.flickr.com/photos/85473033@N00/38961674"
+      },
+      {
+        "k": 1,
+        "title": "Office",
+        "license": "by",
+        "creator": "DavidMartynHunt",
+        "source": "https://www.flickr.com/photos/35395389@N00/1467023552"
+      },
+      {
+        "k": 2,
+        "title": "Nimbuzz Argentina - Office",
+        "license": "by",
+        "creator": "Nimbuzz",
+        "source": "https://www.flickr.com/photos/9078261@N07/3521170397"
+      },
+      {
+        "k": 3,
+        "title": "Eureka Recycling Plant Visit 9.12.14",
+        "license": "by",
+        "creator": "Rep. Keith Ellison",
+        "source": "https://www.flickr.com/photos/9904636@N02/15135702889"
+      },
+      {
+        "k": 4,
+        "title": "President Obama",
+        "license": "by",
+        "creator": "Pete Prodoehl",
+        "source": "https://www.flickr.com/photos/35237092540@N01/8167731771"
+      },
+      {
+        "k": 5,
+        "title": "RUM Small Business Accounting",
+        "license": "by",
+        "creator": "Anoka County Library",
+        "source": "https://www.flickr.com/photos/62258409@N06/7129117969"
+      },
+      {
+        "k": 6,
+        "title": "Pajama Party — I noticed Luke from Founder’s Fund at the SpaceX board meeting going way informal",
+        "license": "by",
+        "creator": "jurvetson",
+        "source": "https://www.flickr.com/photos/44124348109@N01/15794239491"
+      },
+      {
+        "k": 7,
+        "title": "Reunión de la CIDH con el gobierno mexicano",
+        "license": "by",
+        "creator": "Comisión Interamericana de Derechos Humanos",
+        "source": "https://www.flickr.com/photos/52239432@N05/21797798286"
+      }
+    ]
+  },
+  "env_4": {
+    "query": "busy city sidewalk pedestrians",
+    "group": "env",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Rushing to work",
+        "license": "by-sa",
+        "creator": "pavlinajane",
+        "source": "https://www.flickr.com/photos/60291025@N05/12341797005"
+      },
+      {
+        "k": 1,
+        "title": "A question of priority",
+        "license": "by",
+        "creator": "Go-tea 郭天",
+        "source": "https://www.flickr.com/photos/131814204@N04/34160781020"
+      },
+      {
+        "k": 2,
+        "title": "dreaming",
+        "license": "by",
+        "creator": "eflon",
+        "source": "https://www.flickr.com/photos/23094783@N03/3965270276"
+      },
+      {
+        "k": 3,
+        "title": "Street shadow",
+        "license": "by-sa",
+        "creator": "pavlinajane",
+        "source": "https://www.flickr.com/photos/60291025@N05/10842877095"
+      },
+      {
+        "k": 4,
+        "title": "Fixed Gear on 5th Ave Sidewalk",
+        "license": "by-sa",
+        "creator": "Seth W.",
+        "source": "https://www.flickr.com/photos/62999165@N00/28882460"
+      },
+      {
+        "k": 5,
+        "title": "Looking west from 42nd + Broadway",
+        "license": "by",
+        "creator": "IMLS DCC",
+        "source": "https://www.flickr.com/photos/42381338@N04/4427163791"
+      },
+      {
+        "k": 6,
+        "title": "Extended Trading",
+        "license": "by-sa",
+        "creator": "Alan Stanton",
+        "source": "https://www.flickr.com/photos/53921762@N00/13801864624"
+      },
+      {
+        "k": 7,
+        "title": "Spring Street looking north from Sixth Street, ca.1915 (CHS-2470A)",
+        "license": "by",
+        "creator": "Fæ",
+        "source": "https://www.flickr.com/photos/50398299@N08/16039321804"
+      }
+    ]
+  },
+  "env_5": {
+    "query": "supermarket aisle shopper",
+    "group": "env",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Walmart Shoppers Notice Signs Promoting Everyday Low Prices Around the Store",
+        "license": "by",
+        "creator": "Walmart Corporate",
+        "source": "https://www.flickr.com/photos/50128414@N05/5684145463"
+      },
+      {
+        "k": 1,
+        "title": "DeCA opens new commissary in Belgium with a little help from USACE",
+        "license": "by",
+        "creator": "USACE Europe District",
+        "source": "https://www.flickr.com/photos/34728058@N08/4292948126"
+      },
+      {
+        "k": 2,
+        "title": "Walmart's 'Action Alley' Display Signs Feature Value and Convenience on Popular Shopping Items",
+        "license": "by",
+        "creator": "Walmart Corporate",
+        "source": "https://www.flickr.com/photos/50128414@N05/5684811762"
+      },
+      {
+        "k": 3,
+        "title": "Walmart Shopper Selects Frozen Food Items from the New Display Case",
+        "license": "by",
+        "creator": "Walmart Corporate",
+        "source": "https://www.flickr.com/photos/50128414@N05/5684321921"
+      },
+      {
+        "k": 4,
+        "title": "Eaton Centre HDR",
+        "license": "by",
+        "creator": "christopher.woo",
+        "source": "https://www.flickr.com/photos/47643206@N00/194446618"
+      },
+      {
+        "k": 5,
+        "title": "d2590-1",
+        "license": "by",
+        "creator": "USDAgov",
+        "source": "https://www.flickr.com/photos/41284017@N08/8411827143"
+      },
+      {
+        "k": 6,
+        "title": "Target, Card Aisle",
+        "license": "by",
+        "creator": "Consumerist Dot Com",
+        "source": "https://www.flickr.com/photos/21241181@N00/2188363544"
+      },
+      {
+        "k": 7,
+        "title": "DeCA opens new commissary in Belgium with a little help from USACE",
+        "license": "by",
+        "creator": "USACE Europe District",
+        "source": "https://www.flickr.com/photos/34728058@N08/4292207981"
+      }
+    ]
+  },
+  "nolabel_0": {
+    "query": "empty corridor building",
+    "group": "nolabel",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Glowing Prison Corridor",
+        "license": "by",
+        "creator": "Bold Frontiers",
+        "source": "https://www.flickr.com/photos/82955120@N05/19641252004"
+      },
+      {
+        "k": 1,
+        "title": "Custer County High School, Miles City",
+        "license": "by",
+        "creator": "dave_mcmt",
+        "source": "https://www.flickr.com/photos/30512529@N00/187428751"
+      },
+      {
+        "k": 2,
+        "title": "Severalls - Cornered",
+        "license": "by",
+        "creator": "artwork_rebel",
+        "source": "https://www.flickr.com/photos/24092012@N03/2548668498"
+      },
+      {
+        "k": 3,
+        "title": "Antwerp - Panes of Nonsense",
+        "license": "by",
+        "creator": "Shoes on Wires",
+        "source": "https://www.flickr.com/photos/9290458@N07/3351660738"
+      },
+      {
+        "k": 4,
+        "title": "Waterfront In Kota Kinabalu City Centre",
+        "license": "by",
+        "creator": "thienzieyung",
+        "source": "https://www.flickr.com/photos/26978304@N08/8594257879"
+      },
+      {
+        "k": 5,
+        "title": "Ickworth Park (NT) 24-07-2011",
+        "license": "by",
+        "creator": "Karen Roe",
+        "source": "https://www.flickr.com/photos/28752865@N08/6163104997"
+      },
+      {
+        "k": 6,
+        "title": "Musee des Tapisseries - Palais de l'Archeveche - Aix-en-Provence - corridor to the steps",
+        "license": "by",
+        "creator": "ell brown",
+        "source": "https://www.flickr.com/photos/39415781@N06/5783098447"
+      },
+      {
+        "k": 7,
+        "title": "Market Square Mall, former anchor",
+        "license": "by",
+        "creator": "wachovia_138",
+        "source": "https://www.flickr.com/photos/9148720@N05/4541812850"
+      }
+    ]
+  },
+  "nolabel_1": {
+    "query": "staircase indoor",
+    "group": "nolabel",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Mechanics' Institute Libary - San Francisco",
+        "license": "by",
+        "creator": "DeeMakMak",
+        "source": "https://www.flickr.com/photos/45469294@N07/4997711313"
+      },
+      {
+        "k": 1,
+        "title": "Edwardian Hallway in Redhill - Oct 2013 - The Naked Staircase - From the Top",
+        "license": "by",
+        "creator": "Gareth1953 All Right Now",
+        "source": "https://www.flickr.com/photos/40837632@N05/11351510713"
+      },
+      {
+        "k": 2,
+        "title": "Staircase",
+        "license": "by",
+        "creator": "Vince Alongi",
+        "source": "https://www.flickr.com/photos/90963248@N00/854654909"
+      },
+      {
+        "k": 3,
+        "title": "Spiral Staircase, Vatican",
+        "license": "by",
+        "creator": "Dimitry B",
+        "source": "https://www.flickr.com/photos/61533954@N00/2420762006"
+      },
+      {
+        "k": 4,
+        "title": "France, Aisne (02) Guise : Familistère : cour intérieure, pavillon gauche",
+        "license": "by",
+        "creator": "(vincent desjardins)",
+        "source": "https://www.flickr.com/photos/44613506@N07/4880474872"
+      },
+      {
+        "k": 5,
+        "title": "DNA",
+        "license": "by",
+        "creator": "Ian Sane",
+        "source": "https://www.flickr.com/photos/31246066@N04/4132087237"
+      },
+      {
+        "k": 6,
+        "title": "France, Aisne (02) Guise : Familistère : escalier, pavillon central.",
+        "license": "by",
+        "creator": "(vincent desjardins)",
+        "source": "https://www.flickr.com/photos/44613506@N07/4879661493"
+      },
+      {
+        "k": 7,
+        "title": "blue spiral",
+        "license": "by",
+        "creator": "extranoise",
+        "source": "https://www.flickr.com/photos/10508943@N00/169684906"
+      }
+    ]
+  },
+  "nolabel_2": {
+    "query": "construction barrier sidewalk",
+    "group": "nolabel",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Swampscott, Safe Routes to School, November 5, 2013",
+        "license": "pdm",
+        "creator": "MassDOT",
+        "source": "https://www.flickr.com/photos/42009447@N05/10692688594"
+      },
+      {
+        "k": 1,
+        "title": "Downtown Phoenix at Night",
+        "license": "by",
+        "creator": "Michael | Ruiz",
+        "source": "https://www.flickr.com/photos/23957873@N07/2852849798"
+      },
+      {
+        "k": 2,
+        "title": "Sidewalk Closed",
+        "license": "by",
+        "creator": "brownpau",
+        "source": "https://www.flickr.com/photos/44124483743@N01/6347642970"
+      },
+      {
+        "k": 3,
+        "title": "Final concrete placements complete Center Hill Dam barrier wall",
+        "license": "by-sa",
+        "creator": "NashvilleCorps",
+        "source": "https://www.flickr.com/photos/47953739@N08/16666173787"
+      },
+      {
+        "k": 4,
+        "title": "Swoopy",
+        "license": "by",
+        "creator": "Payton Chung",
+        "source": "https://www.flickr.com/photos/41813589@N00/59523062"
+      },
+      {
+        "k": 5,
+        "title": "What's left of old CBS 2",
+        "license": "by",
+        "creator": "smaedli",
+        "source": "https://www.flickr.com/photos/75264768@N00/3710820933"
+      },
+      {
+        "k": 6,
+        "title": "DSCF0784: a person laying on the ground in front of a store",
+        "license": "by-sa",
+        "creator": "PattayaPatrol",
+        "source": "https://www.flickr.com/photos/194424926@N05/54570524868"
+      },
+      {
+        "k": 7,
+        "title": "Removing white sidewalk barriers on Thurman Bridge.",
+        "license": "by",
+        "creator": "Sam Beebe",
+        "source": "https://www.flickr.com/photos/28585409@N04/14008012825"
+      }
+    ]
+  },
+  "nolabel_3": {
+    "query": "wet floor caution sign",
+    "group": "nolabel",
+    "hits": [
+      {
+        "k": 0,
+        "title": "Yellow wet floor caution sign in English",
+        "license": "by-sa",
+        "creator": "BrokenSphere",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=3966788"
+      },
+      {
+        "k": 1,
+        "title": "Stripper",
+        "license": "by",
+        "creator": "Mel B.",
+        "source": "https://www.flickr.com/photos/93587218@N00/263168323"
+      },
+      {
+        "k": 2,
+        "title": "Caution Wet Floor",
+        "license": "by",
+        "creator": "jenni from the block",
+        "source": "https://www.flickr.com/photos/27624680@N02/7693604480"
+      },
+      {
+        "k": 3,
+        "title": "Caution: Portals",
+        "license": "by",
+        "creator": "RoninKengo",
+        "source": "https://www.flickr.com/photos/85205826@N00/2321788223"
+      },
+      {
+        "k": 4,
+        "title": "Caution Wet Floor",
+        "license": "by",
+        "creator": "Joe Shlabotnik",
+        "source": "https://www.flickr.com/photos/40646519@N00/243510291"
+      },
+      {
+        "k": 5,
+        "title": "Caution",
+        "license": "by",
+        "creator": "MSVG",
+        "source": "https://www.flickr.com/photos/13907834@N00/8183706133"
+      },
+      {
+        "k": 6,
+        "title": "'Caution Wet Floor'",
+        "license": "by",
+        "creator": "CarbonNYC [in SF!]",
+        "source": "https://www.flickr.com/photos/15923063@N00/3993866642"
+      },
+      {
+        "k": 7,
+        "title": "lawyers",
+        "license": "by-sa",
+        "creator": "ezola",
+        "source": "https://www.flickr.com/photos/21124414@N00/2592190676"
+      }
+    ]
+  },
+  "nolabel_4": {
+    "query": "empty classroom desks",
+    "group": "nolabel",
+    "hits": [
+      {
+        "k": 0,
+        "title": "UF McCarty Desks Classroom",
+        "license": "by",
+        "creator": "cdsessums",
+        "source": "https://www.flickr.com/photos/53313745@N00/4475297000"
+      },
+      {
+        "k": 1,
+        "title": "Classroom",
+        "license": "by",
+        "creator": "frankjuarez",
+        "source": "https://www.flickr.com/photos/72195450@N00/3569283006"
+      },
+      {
+        "k": 2,
+        "title": "UF HHP Classroom Plastic Wooden Desks Desk",
+        "license": "by-sa",
+        "creator": "cdsessums",
+        "source": "https://www.flickr.com/photos/53313745@N00/5009895195"
+      },
+      {
+        "k": 3,
+        "title": "classroom",
+        "license": "by",
+        "creator": "Lauren Manning",
+        "source": "https://www.flickr.com/photos/28541331@N00/2318943806"
+      },
+      {
+        "k": 4,
+        "title": "Empty classroom",
+        "license": "by",
+        "creator": "ishmael n. daro",
+        "source": "https://www.flickr.com/photos/93280928@N02/8480668550"
+      },
+      {
+        "k": 5,
+        "title": "Empty classroom",
+        "license": "by",
+        "creator": "hectorir",
+        "source": "https://www.flickr.com/photos/30806435@N04/4113368236"
+      },
+      {
+        "k": 6,
+        "title": "More empty classroom stuff, UMBC",
+        "license": "by",
+        "creator": "sidewalk flying",
+        "source": "https://www.flickr.com/photos/76994867@N00/4267034867"
+      },
+      {
+        "k": 7,
+        "title": "",
+        "license": "by",
+        "creator": "petrr",
+        "source": "https://www.flickr.com/photos/10357368@N00/3419539193"
+      }
+    ]
+  },
+  "nolabel_5": {
+    "query": "bicycles parked sidewalk",
+    "group": "nolabel",
+    "hits": [
+      {
+        "k": 0,
+        "title": "HK KTD 九龍灣 Kln Bay 臨興街 Lam Hing Street January 2023 Px3 100 fence n bicycle parking sidewalk",
+        "license": "by-sa",
+        "creator": "FOOWU Hoyallopaxrmii",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=127820051"
+      },
+      {
+        "k": 1,
+        "title": "SZ 深圳 Shenzhen 福田 Futian Caitian Road bicycle parking sidewalk October 2023 R12S",
+        "license": "by-sa",
+        "creator": "URAIRSIDE PASTEE Harma Laum",
+        "source": "https://commons.wikimedia.org/w/index.php?curid=138938031"
+      },
+      {
+        "k": 6,
+        "title": "Jogger in Kapiolani Park",
+        "license": "by-sa",
+        "creator": "Chris Hunkeler",
+        "source": "https://www.flickr.com/photos/14913305@N00/7285055264"
+      },
+      {
+        "k": 7,
+        "title": "Lomo Bike",
+        "license": "by",
+        "creator": "moriza",
+        "source": "https://www.flickr.com/photos/44373968@N00/75374694"
+      }
+    ]
+  }
+}
