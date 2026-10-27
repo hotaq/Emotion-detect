@@ -1,0 +1,68 @@
+\documentclass[12pt,a4paper,oneside]{report}
+\usepackage[margin=25mm,headheight=20pt]{geometry}
+\usepackage{fontspec}
+\setmainfont{THSarabunPSK}[Path=assets/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic]
+\setsansfont{THSarabunPSK}[Path=assets/,Extension=.ttf,UprightFont=*-Regular,BoldFont=*-Bold]
+\setmonofont{lmmono10-regular.otf}[Scale=MatchLowercase]
+% TH SarabunPSK: body 16pt, titles 18pt, small (header, diagram labels) 14pt
+% sizes are Word/PDF points (bp): 16bp = 16.06 TeX pt
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{16.06}{20}%
+  \abovedisplayskip 10\p@ \@plus3\p@ \@minus6\p@ \belowdisplayskip \abovedisplayskip
+  \abovedisplayshortskip \z@ \@plus3\p@ \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@}
+\renewcommand\small{\@setfontsize\small{14.05}{17}}
+\makeatother
+\newcommand{\titlesize}{\fontsize{18.07}{22}\selectfont}
+\normalsize
+\XeTeXlinebreaklocale "th"
+\XeTeXlinebreakskip=0pt plus 1pt
+\usepackage{pifont,capt-of,graphicx,booktabs,tabularx,longtable,array,amsmath,enumitem,xcolor,tikz,fancyhdr,titlesec,float}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
+\usepackage[unicode,colorlinks=true,linkcolor=black,urlcolor=black,citecolor=black]{hyperref}
+\usepackage{bookmark}
+\definecolor{navy}{HTML}{000000}
+\definecolor{pale}{HTML}{F2F2F2}
+\renewcommand{\contentsname}{สารบัญ}
+\renewcommand{\listtablename}{สารบัญตาราง}
+\renewcommand{\listfigurename}{สารบัญภาพ}
+\renewcommand{\tablename}{ตารางที่}
+\renewcommand{\figurename}{ภาพที่}
+\renewcommand{\bibname}{บรรณานุกรม}
+\renewcommand{\chaptername}{บทที่}
+\renewcommand{\appendixname}{ภาคผนวก}
+\titleformat{\chapter}[display]{\bfseries\color{navy}\titlesize}{\chaptername\ \thechapter}{5pt}{\titlesize}
+\titlespacing*{\chapter}{0pt}{0pt}{22pt}
+\titleformat{\section}{\normalsize\bfseries\color{navy}}{\thesection}{0.6em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{\thesubsection}{0.6em}{}
+\setlength{\parindent}{1.3em}
+\setlength{\parskip}{5pt}
+\linespread{1}
+\setlength{\emergencystretch}{3em}
+\tolerance=3000
+\setlist{itemsep=3pt,topsep=5pt,leftmargin=1.6em}
+\renewcommand{\arraystretch}{1.35}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small HENJAI | เห็นใจ}
+\fancyhead[R]{\small ทีม Rushhour}
+\fancyfoot[C]{\normalsize\thepage}
+\renewcommand{\headrulewidth}{0.3pt}
+\fancypagestyle{plain}{\fancyhf{}\fancyfoot[C]{\normalsize\thepage}\renewcommand{\headrulewidth}{0pt}}
+\DeclareRobustCommand{\file}[1]{\nolinkurl{#1}}
+\newcommand{\note}[1]{\par\noindent\colorbox{pale}{\parbox{\dimexpr\linewidth-2\fboxsep}{#1}}\par}
+\newcommand{\frontchapter}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}}
+\newcommand{\projectcover}[1]{%
+\hypersetup{pageanchor=false}\begin{titlepage}\centering\titlesize\bfseries
+HENJAI\par
+\vspace{4mm}เห็นใจ\par
+\vspace{9mm}#1\par
+\vspace{7mm}โครงการผู้ช่วยบรรยายภาพด้วยปัญญาประดิษฐ์\\ที่เข้าใจอารมณ์และบริบทสำหรับผู้พิการทางสายตา\par
+\vspace{3mm}Emotion \& Context-Aware AI Vision Assistant\par
+\vfill
+ผู้จัดทำ\par\vspace{4mm}
+นายกิตติพงศ์ สมสอาด\\
+นายชินพัฒน์ ขุนเจริญ\\
+นายเรข์ณพัศ สุวรรณปริสุทธิ์\par
+\vspace{4mm}ทีม Rushhour\\นิสิตชั้นปีที่ 2 หลักสูตรวิศวกรรมคอมพิวเตอร์และเทคโนโลยีดิจิทัล (CEDT)\\ภาควิชาวิศวกรรมคอมพิวเตอร์\\คณะวิศวกรรมศาสตร์ จุฬาลงกรณ์มหาวิทยาลัย\par
+\end{titlepage}\hypersetup{pageanchor=true}}
